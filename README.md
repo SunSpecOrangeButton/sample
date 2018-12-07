@@ -8,6 +8,8 @@ Anonymizing test data attempts to create files such that the values are believab
 
 The first set of sample data (Monthly Operating Reports) was provided by sPower and Wells Fargo.
 
+The first set of Cutsheet data was supplied by XBRL and Sunspec Alliance.
+
 # Sample Code
 
 The following contains Sample programs for the obcore library.

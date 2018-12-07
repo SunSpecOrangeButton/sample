@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--extracted from OIM /Users/campbellpryde/Google Drive/Taxonomies/Solar/uml/Inverter Data Sheet.xlsx-->
+<xbrl
+  xmlns="http://www.xbrl.org/2003/instance"
+  xmlns:link="http://www.xbrl.org/2003/linkbase"
+  xmlns:solar="http://xbrl.us/Solar/v1.1/2018-02-09/solar"
+  xmlns:utreg="http://www.xbrl.org/2009/utr"
+  xmlns:xbrldi="http://xbrl.org/2006/xbrldi"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+    <link:schemaRef
+      xlink:href="/Users/campbellpryde/Google Drive/Taxonomies/Solar/PRFeb/core/solar_all_2018-02-09_r01.xsd"
+      xlink:type="simple"/>
+    <context id="c-01">
+        <entity>
+            <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
+            <segment>
+                <xbrldi:typedMember dimension="solar:ProductAxis">
+                    <solar:ProductIdentificationDomain>Sunny_Boy_3.0-US-208</solar:ProductIdentificationDomain>
+                </xbrldi:typedMember>
+            </segment>
+        </entity>
+        <period>
+            <forever/>
+        </period>
+    </context>
+    <unit id="u-01">
+        <measure>utreg:W</measure>
+    </unit>
+    <solar:InverterInputMaximumPowerDC contextRef="c-01" decimals="0" unitRef="u-01">3100</solar:InverterInputMaximumPowerDC>
+    <context id="c-02">
+        <entity>
+            <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
+            <segment>
+                <xbrldi:typedMember dimension="solar:ProductAxis">
+                    <solar:ProductIdentificationDomain>Sunny_Boy_3.0-US-240</solar:ProductIdentificationDomain>
+                </xbrldi:typedMember>
+            </segment>
+        </entity>
+        <period>
+            <forever/>
+        </period>
+    </context>
+    <solar:InverterInputMaximumPowerDC contextRef="c-02" decimals="0" unitRef="u-01">3100</solar:InverterInputMaximumPowerDC>
+    <context id="c-03">
+        <entity>
+            <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
+            <segment>
+                <xbrldi:typedMember dimension="solar:ProductAxis">
+                    <solar:ProductIdentificationDomain>Sunny_Boy_3.8-US-208</solar:ProductIdentificationDomain>
+                </xbrldi:typedMember>
+            </segment>
+        </entity>
+        <period>
+            <forever/>
+        </period>
+    </context>
+    <solar:InverterInputMaximumPowerDC contextRef="c-03" decimals="0" unitRef="u-01">3450</solar:InverterInputMaximumPowerDC>
+    <context id="c-04">
+        <entity>
+            <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
+            <segment>
+                <xbrldi:typedMember dimension="solar:ProductAxis">
+                    <solar:ProductIdentificationDomain>Sunny_Boy_3.8-US-240</solar:ProductIdentificationDomain>
+                </xbrldi:typedMember>
+            </segment>
+        </entity>
+        <period>
+            <forever/>
+        </period>
+    </context>
+    <solar:InverterInputMaximumPowerDC contextRef="c-04" decimals="0" unitRef="u-01">4000</solar:InverterInputMaximumPowerDC>
+    <context id="c-05">
+        <entity>
+            <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
+            <segment>
+                <xbrldi:typedMember dimension="solar:ProductAxis">
+                    <solar:ProductIdentificationDomain>Sunny_Boy_5.0-US-208</solar:ProductIdentificationDomain>
+                </xbrldi:typedMember>
+            </segment>
+        </entity>
+        <period>
+            <forever/>
+        </period>
+    </context>
+    <solar:InverterInputMaximumPowerDC contextRef="c-05" decimals="0" unitRef="u-01">5150</solar:InverterInputMaximumPowerDC>
+    <context id="c-06">
+        <entity>
+            <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
+            <segment>
+                <xbrldi:typedMember dimension="solar:ProductAxis">
+                    <solar:ProductIdentificationDomain>Sunny_Boy_5.0-US-240</solar:ProductIdentificationDomain>
+                </xbrldi:typedMember>
+            </segment>
+        </entity>
+        <period>
+            <forever/>
+        </period>
+    </context>
+    <solar:InverterInputMaximumPowerDC contextRef="c-06" decimals="0" unitRef="u-01">5150</solar:InverterInputMaximumPowerDC>
+    <unit id="u-02">
+        <measure>utreg:V</measure>
+    </unit>
+    <solar:InverterInputMaximumVoltageDC contextRef="c-01" decimals="0" unitRef="u-02">600</solar:InverterInputMaximumVoltageDC>
+    <solar:InverterInputMaximumVoltageDC contextRef="c-02" decimals="0" unitRef="u-02">600</solar:InverterInputMaximumVoltageDC>
+    <solar:InverterInputMaximumVoltageDC contextRef="c-03" decimals="0" unitRef="u-02">600</solar:InverterInputMaximumVoltageDC>
+    <solar:InverterInputMaximumVoltageDC contextRef="c-04" decimals="0" unitRef="u-02">600</solar:InverterInputMaximumVoltageDC>
+    <solar:InverterInputMaximumVoltageDC contextRef="c-05" decimals="0" unitRef="u-02">600</solar:InverterInputMaximumVoltageDC>
+    <solar:InverterInputMaximumVoltageDC contextRef="c-06" decimals="0" unitRef="u-02">600</solar:InverterInputMaximumVoltageDC>
+    <solar:InverterInputMinimumMPPVoltage contextRef="c-01" decimals="0" unitRef="u-02">155</solar:InverterInputMinimumMPPVoltage>
+    <solar:InverterInputMinimumMPPVoltage contextRef="c-02" decimals="0" unitRef="u-02">155</solar:InverterInputMinimumMPPVoltage>
+    <solar:InverterInputMinimumMPPVoltage contextRef="c-03" decimals="0" unitRef="u-02">195</solar:InverterInputMinimumMPPVoltage>
+    <solar:InverterInputMinimumMPPVoltage contextRef="c-04" decimals="0" unitRef="u-02">195</solar:InverterInputMinimumMPPVoltage>
+    <solar:InverterInputMinimumMPPVoltage contextRef="c-05" decimals="0" unitRef="u-02">220</solar:InverterInputMinimumMPPVoltage>
+    <solar:InverterInputMinimumMPPVoltage contextRef="c-06" decimals="0" unitRef="u-02">220</solar:InverterInputMinimumMPPVoltage>
+    <solar:InverterInputMaximumMPPVoltage contextRef="c-01" decimals="0" unitRef="u-02">480</solar:InverterInputMaximumMPPVoltage>
+    <solar:InverterInputMaximumMPPVoltage contextRef="c-02" decimals="0" unitRef="u-02">480</solar:InverterInputMaximumMPPVoltage>
+    <solar:InverterInputMaximumMPPVoltage contextRef="c-03" decimals="0" unitRef="u-02">480</solar:InverterInputMaximumMPPVoltage>
+    <solar:InverterInputMaximumMPPVoltage contextRef="c-04" decimals="0" unitRef="u-02">480</solar:InverterInputMaximumMPPVoltage>
+    <solar:InverterInputMaximumMPPVoltage contextRef="c-05" decimals="0" unitRef="u-02">480</solar:InverterInputMaximumMPPVoltage>
+    <solar:InverterInputMaximumMPPVoltage contextRef="c-06" decimals="0" unitRef="u-02">480</solar:InverterInputMaximumMPPVoltage>
+    <solar:InverterMPPTOperatingRangeVoltageMaximum contextRef="c-01" decimals="0" unitRef="u-02">550</solar:InverterMPPTOperatingRangeVoltageMaximum>
+    <solar:InverterMPPTOperatingRangeVoltageMaximum contextRef="c-02" decimals="0" unitRef="u-02">550</solar:InverterMPPTOperatingRangeVoltageMaximum>
+    <solar:InverterMPPTOperatingRangeVoltageMaximum contextRef="c-03" decimals="0" unitRef="u-02">550</solar:InverterMPPTOperatingRangeVoltageMaximum>
+    <solar:InverterMPPTOperatingRangeVoltageMaximum contextRef="c-04" decimals="0" unitRef="u-02">550</solar:InverterMPPTOperatingRangeVoltageMaximum>
+    <solar:InverterMPPTOperatingRangeVoltageMaximum contextRef="c-05" decimals="0" unitRef="u-02">550</solar:InverterMPPTOperatingRangeVoltageMaximum>
+    <solar:InverterMPPTOperatingRangeVoltageMaximum contextRef="c-06" decimals="0" unitRef="u-02">550</solar:InverterMPPTOperatingRangeVoltageMaximum>
+    <solar:InverterMPPTOperatingRangeVoltageMinimum contextRef="c-01" decimals="0" unitRef="u-02">100</solar:InverterMPPTOperatingRangeVoltageMinimum>
+    <solar:InverterMPPTOperatingRangeVoltageMinimum contextRef="c-02" decimals="0" unitRef="u-02">100</solar:InverterMPPTOperatingRangeVoltageMinimum>
+    <solar:InverterMPPTOperatingRangeVoltageMinimum contextRef="c-03" decimals="0" unitRef="u-02">100</solar:InverterMPPTOperatingRangeVoltageMinimum>
+    <solar:InverterMPPTOperatingRangeVoltageMinimum contextRef="c-04" decimals="0" unitRef="u-02">100</solar:InverterMPPTOperatingRangeVoltageMinimum>
+    <solar:InverterMPPTOperatingRangeVoltageMinimum contextRef="c-05" decimals="0" unitRef="u-02">100</solar:InverterMPPTOperatingRangeVoltageMinimum>
+    <solar:InverterMPPTOperatingRangeVoltageMinimum contextRef="c-06" decimals="0" unitRef="u-02">100</solar:InverterMPPTOperatingRangeVoltageMinimum>
+    <solar:InverterMinimumStartVoltage contextRef="c-01" decimals="0" unitRef="u-02">125</solar:InverterMinimumStartVoltage>
+    <solar:InverterMinimumStartVoltage contextRef="c-02" decimals="0" unitRef="u-02">125</solar:InverterMinimumStartVoltage>
+    <solar:InverterMinimumStartVoltage contextRef="c-03" decimals="0" unitRef="u-02">125</solar:InverterMinimumStartVoltage>
+    <solar:InverterMinimumStartVoltage contextRef="c-04" decimals="0" unitRef="u-02">125</solar:InverterMinimumStartVoltage>
+    <solar:InverterMinimumStartVoltage contextRef="c-05" decimals="0" unitRef="u-02">125</solar:InverterMinimumStartVoltage>
+    <solar:InverterMinimumStartVoltage contextRef="c-06" decimals="0" unitRef="u-02">125</solar:InverterMinimumStartVoltage>
+    <unit id="u-03">
+        <measure>utreg:A</measure>
+    </unit>
+    <solar:InverterInputMaximumOperatingCurrentDC contextRef="c-01" decimals="0" unitRef="u-03">10</solar:InverterInputMaximumOperatingCurrentDC>
+    <solar:InverterInputMaximumOperatingCurrentDC contextRef="c-02" decimals="0" unitRef="u-03">10</solar:InverterInputMaximumOperatingCurrentDC>
+    <solar:InverterInputMaximumOperatingCurrentDC contextRef="c-03" decimals="0" unitRef="u-03">10</solar:InverterInputMaximumOperatingCurrentDC>
+    <solar:InverterInputMaximumOperatingCurrentDC contextRef="c-04" decimals="0" unitRef="u-03">10</solar:InverterInputMaximumOperatingCurrentDC>
+    <solar:InverterInputMaximumOperatingCurrentDC contextRef="c-05" decimals="0" unitRef="u-03">10</solar:InverterInputMaximumOperatingCurrentDC>
+    <solar:InverterInputMaximumOperatingCurrentDC contextRef="c-06" decimals="0" unitRef="u-03">10</solar:InverterInputMaximumOperatingCurrentDC>
+    <solar:InverterInputShortCircuitCurrentDC contextRef="c-01" decimals="0" unitRef="u-03">18</solar:InverterInputShortCircuitCurrentDC>
+    <solar:InverterInputShortCircuitCurrentDC contextRef="c-02" decimals="0" unitRef="u-03">18</solar:InverterInputShortCircuitCurrentDC>
+    <solar:InverterInputShortCircuitCurrentDC contextRef="c-03" decimals="0" unitRef="u-03">18</solar:InverterInputShortCircuitCurrentDC>
+    <solar:InverterInputShortCircuitCurrentDC contextRef="c-04" decimals="0" unitRef="u-03">18</solar:InverterInputShortCircuitCurrentDC>
+    <solar:InverterInputShortCircuitCurrentDC contextRef="c-05" decimals="0" unitRef="u-03">18</solar:InverterInputShortCircuitCurrentDC>
+    <solar:InverterInputShortCircuitCurrentDC contextRef="c-06" decimals="0" unitRef="u-03">18</solar:InverterInputShortCircuitCurrentDC>
+    <unit id="u-04">
+        <measure>pure</measure>
+    </unit>
+    <solar:InverterInputNumberOfMaximumPowerPointTrackers contextRef="c-01" decimals="0" unitRef="u-04">2</solar:InverterInputNumberOfMaximumPowerPointTrackers>
+    <solar:InverterInputNumberOfMaximumPowerPointTrackers contextRef="c-02" decimals="0" unitRef="u-04">2</solar:InverterInputNumberOfMaximumPowerPointTrackers>
+    <solar:InverterInputNumberOfMaximumPowerPointTrackers contextRef="c-03" decimals="0" unitRef="u-04">2</solar:InverterInputNumberOfMaximumPowerPointTrackers>
+    <solar:InverterInputNumberOfMaximumPowerPointTrackers contextRef="c-04" decimals="0" unitRef="u-04">2</solar:InverterInputNumberOfMaximumPowerPointTrackers>
+    <solar:InverterInputNumberOfMaximumPowerPointTrackers contextRef="c-05" decimals="0" unitRef="u-04">3</solar:InverterInputNumberOfMaximumPowerPointTrackers>
+    <solar:InverterInputNumberOfMaximumPowerPointTrackers contextRef="c-06" decimals="0" unitRef="u-04">3</solar:InverterInputNumberOfMaximumPowerPointTrackers>
+    <solar:InverterInputStringsPerMaximumPowerPointTrackerNumber contextRef="c-01" decimals="0" unitRef="u-04">1</solar:InverterInputStringsPerMaximumPowerPointTrackerNumber>
+    <solar:InverterInputStringsPerMaximumPowerPointTrackerNumber contextRef="c-02" decimals="0" unitRef="u-04">1</solar:InverterInputStringsPerMaximumPowerPointTrackerNumber>
+    <solar:InverterInputStringsPerMaximumPowerPointTrackerNumber contextRef="c-03" decimals="0" unitRef="u-04">1</solar:InverterInputStringsPerMaximumPowerPointTrackerNumber>
+    <solar:InverterInputStringsPerMaximumPowerPointTrackerNumber contextRef="c-04" decimals="0" unitRef="u-04">1</solar:InverterInputStringsPerMaximumPowerPointTrackerNumber>
+    <solar:InverterInputStringsPerMaximumPowerPointTrackerNumber contextRef="c-05" decimals="0" unitRef="u-04">1</solar:InverterInputStringsPerMaximumPowerPointTrackerNumber>
+    <solar:InverterInputStringsPerMaximumPowerPointTrackerNumber contextRef="c-06" decimals="0" unitRef="u-04">1</solar:InverterInputStringsPerMaximumPowerPointTrackerNumber>
+    <solar:InverterIsMPPT contextRef="c-01">true</solar:InverterIsMPPT>
+    <solar:InverterIsMPPT contextRef="c-02">true</solar:InverterIsMPPT>
+    <solar:InverterIsMPPT contextRef="c-03">true</solar:InverterIsMPPT>
+    <solar:InverterIsMPPT contextRef="c-04">true</solar:InverterIsMPPT>
+    <solar:InverterIsMPPT contextRef="c-05">true</solar:InverterIsMPPT>
+    <solar:InverterIsMPPT contextRef="c-06">true</solar:InverterIsMPPT>
+    <solar:InverterOutputRatedPowerAC contextRef="c-01" decimals="0" unitRef="u-01">3000</solar:InverterOutputRatedPowerAC>
+    <solar:InverterOutputRatedPowerAC contextRef="c-02" decimals="0" unitRef="u-01">3000</solar:InverterOutputRatedPowerAC>
+    <solar:InverterOutputRatedPowerAC contextRef="c-03" decimals="0" unitRef="u-01">3330</solar:InverterOutputRatedPowerAC>
+    <solar:InverterOutputRatedPowerAC contextRef="c-04" decimals="0" unitRef="u-01">3800</solar:InverterOutputRatedPowerAC>
+    <solar:InverterOutputRatedPowerAC contextRef="c-05" decimals="0" unitRef="u-01">5000</solar:InverterOutputRatedPowerAC>
+    <solar:InverterOutputRatedPowerAC contextRef="c-06" decimals="0" unitRef="u-01">5000</solar:InverterOutputRatedPowerAC>
+    <unit id="u-05">
+        <measure>utreg:VA</measure>
+    </unit>
+    <solar:InverterOutputMaximumApparentPowerAC contextRef="c-01" decimals="0" unitRef="u-05">3000</solar:InverterOutputMaximumApparentPowerAC>
+    <solar:InverterOutputMaximumApparentPowerAC contextRef="c-02" decimals="0" unitRef="u-05">3000</solar:InverterOutputMaximumApparentPowerAC>
+    <solar:InverterOutputMaximumApparentPowerAC contextRef="c-03" decimals="0" unitRef="u-05">3330</solar:InverterOutputMaximumApparentPowerAC>
+    <solar:InverterOutputMaximumApparentPowerAC contextRef="c-04" decimals="0" unitRef="u-05">3800</solar:InverterOutputMaximumApparentPowerAC>
+    <solar:InverterOutputMaximumApparentPowerAC contextRef="c-05" decimals="0" unitRef="u-05">5000</solar:InverterOutputMaximumApparentPowerAC>
+    <solar:InverterOutputMaximumApparentPowerAC contextRef="c-06" decimals="0" unitRef="u-05">5000</solar:InverterOutputMaximumApparentPowerAC>
+    <solar:InverterOutputRatedVoltageAC contextRef="c-01" decimals="0" unitRef="u-02">208</solar:InverterOutputRatedVoltageAC>
+    <solar:InverterOutputRatedVoltageAC contextRef="c-02" decimals="0" unitRef="u-02">240</solar:InverterOutputRatedVoltageAC>
+    <solar:InverterOutputRatedVoltageAC contextRef="c-03" decimals="0" unitRef="u-02">208</solar:InverterOutputRatedVoltageAC>
+    <solar:InverterOutputRatedVoltageAC contextRef="c-04" decimals="0" unitRef="u-02">240</solar:InverterOutputRatedVoltageAC>
+    <solar:InverterOutputRatedVoltageAC contextRef="c-05" decimals="0" unitRef="u-02">208</solar:InverterOutputRatedVoltageAC>
+    <solar:InverterOutputRatedVoltageAC contextRef="c-06" decimals="0" unitRef="u-02">240</solar:InverterOutputRatedVoltageAC>
+    <solar:InverterOutputVoltageRangeACMaximum contextRef="c-01" decimals="0" unitRef="u-02">229</solar:InverterOutputVoltageRangeACMaximum>
+    <solar:InverterOutputVoltageRangeACMaximum contextRef="c-02" decimals="0" unitRef="u-02">264</solar:InverterOutputVoltageRangeACMaximum>
+    <solar:InverterOutputVoltageRangeACMaximum contextRef="c-03" decimals="0" unitRef="u-02">229</solar:InverterOutputVoltageRangeACMaximum>
+    <solar:InverterOutputVoltageRangeACMaximum contextRef="c-04" decimals="0" unitRef="u-02">264</solar:InverterOutputVoltageRangeACMaximum>
+    <solar:InverterOutputVoltageRangeACMaximum contextRef="c-05" decimals="0" unitRef="u-02">229</solar:InverterOutputVoltageRangeACMaximum>
+    <solar:InverterOutputVoltageRangeACMaximum contextRef="c-06" decimals="0" unitRef="u-02">264</solar:InverterOutputVoltageRangeACMaximum>
+    <solar:InverterOutputVoltageRangeACMinimum contextRef="c-01" decimals="0" unitRef="u-02">183</solar:InverterOutputVoltageRangeACMinimum>
+    <solar:InverterOutputVoltageRangeACMinimum contextRef="c-02" decimals="0" unitRef="u-02">211</solar:InverterOutputVoltageRangeACMinimum>
+    <solar:InverterOutputVoltageRangeACMinimum contextRef="c-03" decimals="0" unitRef="u-02">183</solar:InverterOutputVoltageRangeACMinimum>
+    <solar:InverterOutputVoltageRangeACMinimum contextRef="c-04" decimals="0" unitRef="u-02">211</solar:InverterOutputVoltageRangeACMinimum>
+    <solar:InverterOutputVoltageRangeACMinimum contextRef="c-05" decimals="0" unitRef="u-02">183</solar:InverterOutputVoltageRangeACMinimum>
+    <solar:InverterOutputVoltageRangeACMinimum contextRef="c-06" decimals="0" unitRef="u-02">211</solar:InverterOutputVoltageRangeACMinimum>
+    <unit id="u-06">
+        <measure>utreg:Hz</measure>
+    </unit>
+    <solar:InverterOutputACFrequencyRangeMaximum contextRef="c-01" decimals="0" unitRef="u-06">60</solar:InverterOutputACFrequencyRangeMaximum>
+    <solar:InverterOutputACFrequencyRangeMaximum contextRef="c-02" decimals="0" unitRef="u-06">60</solar:InverterOutputACFrequencyRangeMaximum>
+    <solar:InverterOutputACFrequencyRangeMaximum contextRef="c-03" decimals="0" unitRef="u-06">60</solar:InverterOutputACFrequencyRangeMaximum>
+    <solar:InverterOutputACFrequencyRangeMaximum contextRef="c-04" decimals="0" unitRef="u-06">60</solar:InverterOutputACFrequencyRangeMaximum>
+    <solar:InverterOutputACFrequencyRangeMaximum contextRef="c-05" decimals="0" unitRef="u-06">60</solar:InverterOutputACFrequencyRangeMaximum>
+    <solar:InverterOutputACFrequencyRangeMaximum contextRef="c-06" decimals="0" unitRef="u-06">60</solar:InverterOutputACFrequencyRangeMaximum>
+    <solar:InverterOutputACFrequencyRangeMinimum contextRef="c-01" decimals="0" unitRef="u-06">50</solar:InverterOutputACFrequencyRangeMinimum>
+    <solar:InverterOutputACFrequencyRangeMinimum contextRef="c-02" decimals="0" unitRef="u-06">50</solar:InverterOutputACFrequencyRangeMinimum>
+    <solar:InverterOutputACFrequencyRangeMinimum contextRef="c-03" decimals="0" unitRef="u-06">50</solar:InverterOutputACFrequencyRangeMinimum>
+    <solar:InverterOutputACFrequencyRangeMinimum contextRef="c-04" decimals="0" unitRef="u-06">50</solar:InverterOutputACFrequencyRangeMinimum>
+    <solar:InverterOutputACFrequencyRangeMinimum contextRef="c-05" decimals="0" unitRef="u-06">50</solar:InverterOutputACFrequencyRangeMinimum>
+    <solar:InverterOutputACFrequencyRangeMinimum contextRef="c-06" decimals="0" unitRef="u-06">50</solar:InverterOutputACFrequencyRangeMinimum>
+    <solar:InverterOutputMaximumCurrentAC contextRef="c-01" decimals="1" unitRef="u-03">14.5</solar:InverterOutputMaximumCurrentAC>
+    <solar:InverterOutputMaximumCurrentAC contextRef="c-02" decimals="1" unitRef="u-03">12.5</solar:InverterOutputMaximumCurrentAC>
+    <solar:InverterOutputMaximumCurrentAC contextRef="c-03" decimals="1" unitRef="u-03">16</solar:InverterOutputMaximumCurrentAC>
+    <solar:InverterOutputMaximumCurrentAC contextRef="c-04" decimals="1" unitRef="u-03">16</solar:InverterOutputMaximumCurrentAC>
+    <solar:InverterOutputMaximumCurrentAC contextRef="c-05" decimals="1" unitRef="u-03">24</solar:InverterOutputMaximumCurrentAC>
+    <solar:InverterOutputMaximumCurrentAC contextRef="c-06" decimals="1" unitRef="u-03">24</solar:InverterOutputMaximumCurrentAC>
+    <solar:InverterPowerFactor contextRef="c-01" decimals="0" unitRef="u-04">1</solar:InverterPowerFactor>
+    <solar:InverterPowerFactor contextRef="c-02" decimals="0" unitRef="u-04">1</solar:InverterPowerFactor>
+    <solar:InverterPowerFactor contextRef="c-03" decimals="0" unitRef="u-04">1</solar:InverterPowerFactor>
+    <solar:InverterPowerFactor contextRef="c-04" decimals="0" unitRef="u-04">1</solar:InverterPowerFactor>
+    <solar:InverterPowerFactor contextRef="c-05" decimals="0" unitRef="u-04">1</solar:InverterPowerFactor>
+    <solar:InverterPowerFactor contextRef="c-06" decimals="0" unitRef="u-04">1</solar:InverterPowerFactor>
+    <solar:InverterOutputPhaseType contextRef="c-01">Single Phase</solar:InverterOutputPhaseType>
+    <solar:InverterOutputPhaseType contextRef="c-02">Single Phase</solar:InverterOutputPhaseType>
+    <solar:InverterOutputPhaseType contextRef="c-03">Single Phase</solar:InverterOutputPhaseType>
+    <solar:InverterOutputPhaseType contextRef="c-04">Single Phase</solar:InverterOutputPhaseType>
+    <solar:InverterOutputPhaseType contextRef="c-05">Single Phase</solar:InverterOutputPhaseType>
+    <solar:InverterOutputPhaseType contextRef="c-06">Single Phase</solar:InverterOutputPhaseType>
+    <solar:InverterNumberOfLineConnections contextRef="c-01" decimals="0" unitRef="u-04">2</solar:InverterNumberOfLineConnections>
+    <solar:InverterNumberOfLineConnections contextRef="c-02" decimals="0" unitRef="u-04">2</solar:InverterNumberOfLineConnections>
+    <solar:InverterNumberOfLineConnections contextRef="c-03" decimals="0" unitRef="u-04">2</solar:InverterNumberOfLineConnections>
+    <solar:InverterNumberOfLineConnections contextRef="c-04" decimals="0" unitRef="u-04">2</solar:InverterNumberOfLineConnections>
+    <solar:InverterNumberOfLineConnections contextRef="c-05" decimals="0" unitRef="u-04">2</solar:InverterNumberOfLineConnections>
+    <solar:InverterNumberOfLineConnections contextRef="c-06" decimals="0" unitRef="u-04">2</solar:InverterNumberOfLineConnections>
+    <solar:InverterHarmonicsTheshold contextRef="c-01" decimals="2" unitRef="u-04">0.04</solar:InverterHarmonicsTheshold>
+    <solar:InverterHarmonicsTheshold contextRef="c-02" decimals="2" unitRef="u-04">0.04</solar:InverterHarmonicsTheshold>
+    <solar:InverterHarmonicsTheshold contextRef="c-03" decimals="2" unitRef="u-04">0.04</solar:InverterHarmonicsTheshold>
+    <solar:InverterHarmonicsTheshold contextRef="c-04" decimals="2" unitRef="u-04">0.04</solar:InverterHarmonicsTheshold>
+    <solar:InverterHarmonicsTheshold contextRef="c-05" decimals="2" unitRef="u-04">0.04</solar:InverterHarmonicsTheshold>
+    <solar:InverterHarmonicsTheshold contextRef="c-06" decimals="2" unitRef="u-04">0.04</solar:InverterHarmonicsTheshold>
+    <solar:InverterMaximumEfficiency contextRef="c-01" decimals="4" unitRef="u-04">0.972</solar:InverterMaximumEfficiency>
+    <solar:InverterMaximumEfficiency contextRef="c-02" decimals="4" unitRef="u-04">0.976</solar:InverterMaximumEfficiency>
+    <solar:InverterMaximumEfficiency contextRef="c-03" decimals="4" unitRef="u-04">0.972</solar:InverterMaximumEfficiency>
+    <solar:InverterMaximumEfficiency contextRef="c-04" decimals="4" unitRef="u-04">0.975</solar:InverterMaximumEfficiency>
+    <solar:InverterMaximumEfficiency contextRef="c-05" decimals="4" unitRef="u-04">0.972</solar:InverterMaximumEfficiency>
+    <solar:InverterMaximumEfficiency contextRef="c-06" decimals="4" unitRef="u-04">0.975</solar:InverterMaximumEfficiency>
+    <solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent contextRef="c-01" decimals="4" unitRef="u-04">0.96</solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent>
+    <solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent contextRef="c-02" decimals="4" unitRef="u-04">0.965</solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent>
+    <solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent contextRef="c-03" decimals="4" unitRef="u-04">0.965</solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent>
+    <solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent contextRef="c-04" decimals="4" unitRef="u-04">0.965</solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent>
+    <solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent contextRef="c-05" decimals="4" unitRef="u-04">0.965</solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent>
+    <solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent contextRef="c-06" decimals="4" unitRef="u-04">0.97</solar:InverterCaliforniaEnergyCommissionWeightedEfficiencyPercent>
+    <solar:InverterHasDCDisconnectDevice contextRef="c-01">true</solar:InverterHasDCDisconnectDevice>
+    <solar:InverterHasDCDisconnectDevice contextRef="c-02">true</solar:InverterHasDCDisconnectDevice>
+    <solar:InverterHasDCDisconnectDevice contextRef="c-03">true</solar:InverterHasDCDisconnectDevice>
+    <solar:InverterHasDCDisconnectDevice contextRef="c-04">true</solar:InverterHasDCDisconnectDevice>
+    <solar:InverterHasDCDisconnectDevice contextRef="c-05">true</solar:InverterHasDCDisconnectDevice>
+    <solar:InverterHasDCDisconnectDevice contextRef="c-06">true</solar:InverterHasDCDisconnectDevice>
+    <solar:InverterReversePolarityFlag contextRef="c-01">true</solar:InverterReversePolarityFlag>
+    <solar:InverterReversePolarityFlag contextRef="c-02">true</solar:InverterReversePolarityFlag>
+    <solar:InverterReversePolarityFlag contextRef="c-03">true</solar:InverterReversePolarityFlag>
+    <solar:InverterReversePolarityFlag contextRef="c-04">true</solar:InverterReversePolarityFlag>
+    <solar:InverterReversePolarityFlag contextRef="c-05">true</solar:InverterReversePolarityFlag>
+    <solar:InverterReversePolarityFlag contextRef="c-06">true</solar:InverterReversePolarityFlag>
+    <solar:InverterHasGroundFaultMonitoring contextRef="c-01">true</solar:InverterHasGroundFaultMonitoring>
+    <solar:InverterHasGroundFaultMonitoring contextRef="c-02">true</solar:InverterHasGroundFaultMonitoring>
+    <solar:InverterHasGroundFaultMonitoring contextRef="c-03">true</solar:InverterHasGroundFaultMonitoring>
+    <solar:InverterHasGroundFaultMonitoring contextRef="c-04">true</solar:InverterHasGroundFaultMonitoring>
+    <solar:InverterHasGroundFaultMonitoring contextRef="c-05">true</solar:InverterHasGroundFaultMonitoring>
+    <solar:InverterHasGroundFaultMonitoring contextRef="c-06">true</solar:InverterHasGroundFaultMonitoring>
+    <solar:InverterStyle contextRef="c-01">String</solar:InverterStyle>
+    <solar:InverterStyle contextRef="c-02">String</solar:InverterStyle>
+    <solar:InverterStyle contextRef="c-03">String</solar:InverterStyle>
+    <solar:InverterStyle contextRef="c-04">String</solar:InverterStyle>
+    <solar:InverterStyle contextRef="c-05">String</solar:InverterStyle>
+    <solar:InverterStyle contextRef="c-06">String</solar:InverterStyle>
+    <unit id="u-07">
+        <measure>utreg:mm</measure>
+    </unit>
+    <solar:InverterWidth contextRef="c-01" decimals="0" unitRef="u-07">535</solar:InverterWidth>
+    <solar:InverterWidth contextRef="c-02" decimals="0" unitRef="u-07">535</solar:InverterWidth>
+    <solar:InverterWidth contextRef="c-03" decimals="0" unitRef="u-07">535</solar:InverterWidth>
+    <solar:InverterWidth contextRef="c-04" decimals="0" unitRef="u-07">535</solar:InverterWidth>
+    <solar:InverterWidth contextRef="c-05" decimals="0" unitRef="u-07">535</solar:InverterWidth>
+    <solar:InverterWidth contextRef="c-06" decimals="0" unitRef="u-07">535</solar:InverterWidth>
+    <solar:InverterLength contextRef="c-01" decimals="0" unitRef="u-07">730</solar:InverterLength>
+    <solar:InverterLength contextRef="c-02" decimals="0" unitRef="u-07">730</solar:InverterLength>
+    <solar:InverterLength contextRef="c-03" decimals="0" unitRef="u-07">730</solar:InverterLength>
+    <solar:InverterLength contextRef="c-04" decimals="0" unitRef="u-07">730</solar:InverterLength>
+    <solar:InverterLength contextRef="c-05" decimals="0" unitRef="u-07">730</solar:InverterLength>
+    <solar:InverterLength contextRef="c-06" decimals="0" unitRef="u-07">730</solar:InverterLength>
+    <solar:InverterDepth contextRef="c-01" decimals="0" unitRef="u-07">198</solar:InverterDepth>
+    <solar:InverterDepth contextRef="c-02" decimals="0" unitRef="u-07">198</solar:InverterDepth>
+    <solar:InverterDepth contextRef="c-03" decimals="0" unitRef="u-07">198</solar:InverterDepth>
+    <solar:InverterDepth contextRef="c-04" decimals="0" unitRef="u-07">198</solar:InverterDepth>
+    <solar:InverterDepth contextRef="c-05" decimals="0" unitRef="u-07">198</solar:InverterDepth>
+    <solar:InverterDepth contextRef="c-06" decimals="0" unitRef="u-07">198</solar:InverterDepth>
+    <unit id="u-08">
+        <measure>utreg:kg</measure>
+    </unit>
+    <solar:InverterWeight contextRef="c-01" decimals="0" unitRef="u-08">26</solar:InverterWeight>
+    <solar:InverterWeight contextRef="c-02" decimals="0" unitRef="u-08">26</solar:InverterWeight>
+    <solar:InverterWeight contextRef="c-03" decimals="0" unitRef="u-08">26</solar:InverterWeight>
+    <solar:InverterWeight contextRef="c-04" decimals="0" unitRef="u-08">26</solar:InverterWeight>
+    <solar:InverterWeight contextRef="c-05" decimals="0" unitRef="u-08">26</solar:InverterWeight>
+    <solar:InverterWeight contextRef="c-06" decimals="0" unitRef="u-08">26</solar:InverterWeight>
+    <unit id="u-09">
+        <measure>utreg:Cel</measure>
+    </unit>
+    <solar:InverterOperatingTemperatureRangeMinimum contextRef="c-01" decimals="0" unitRef="u-09">-25</solar:InverterOperatingTemperatureRangeMinimum>
+    <solar:InverterOperatingTemperatureRangeMinimum contextRef="c-02" decimals="0" unitRef="u-09">-25</solar:InverterOperatingTemperatureRangeMinimum>
+    <solar:InverterOperatingTemperatureRangeMinimum contextRef="c-03" decimals="0" unitRef="u-09">-25</solar:InverterOperatingTemperatureRangeMinimum>
+    <solar:InverterOperatingTemperatureRangeMinimum contextRef="c-04" decimals="0" unitRef="u-09">-25</solar:InverterOperatingTemperatureRangeMinimum>
+    <solar:InverterOperatingTemperatureRangeMinimum contextRef="c-05" decimals="0" unitRef="u-09">-25</solar:InverterOperatingTemperatureRangeMinimum>
+    <solar:InverterOperatingTemperatureRangeMinimum contextRef="c-06" decimals="0" unitRef="u-09">-25</solar:InverterOperatingTemperatureRangeMinimum>
+    <solar:InverterOperatingTemperatureRangeMaximum contextRef="c-01" decimals="0" unitRef="u-09">60</solar:InverterOperatingTemperatureRangeMaximum>
+    <solar:InverterOperatingTemperatureRangeMaximum contextRef="c-02" decimals="0" unitRef="u-09">60</solar:InverterOperatingTemperatureRangeMaximum>
+    <solar:InverterOperatingTemperatureRangeMaximum contextRef="c-03" decimals="0" unitRef="u-09">60</solar:InverterOperatingTemperatureRangeMaximum>
+    <solar:InverterOperatingTemperatureRangeMaximum contextRef="c-04" decimals="0" unitRef="u-09">60</solar:InverterOperatingTemperatureRangeMaximum>
+    <solar:InverterOperatingTemperatureRangeMaximum contextRef="c-05" decimals="0" unitRef="u-09">60</solar:InverterOperatingTemperatureRangeMaximum>
+    <solar:InverterOperatingTemperatureRangeMaximum contextRef="c-06" decimals="0" unitRef="u-09">60</solar:InverterOperatingTemperatureRangeMaximum>
+    <solar:InverterNighttimePowerConsumption contextRef="c-01" decimals="0" unitRef="u-01">5</solar:InverterNighttimePowerConsumption>
+    <solar:InverterNighttimePowerConsumption contextRef="c-02" decimals="0" unitRef="u-01">5</solar:InverterNighttimePowerConsumption>
+    <solar:InverterNighttimePowerConsumption contextRef="c-03" decimals="0" unitRef="u-01">5</solar:InverterNighttimePowerConsumption>
+    <solar:InverterNighttimePowerConsumption contextRef="c-04" decimals="0" unitRef="u-01">5</solar:InverterNighttimePowerConsumption>
+    <solar:InverterNighttimePowerConsumption contextRef="c-05" decimals="0" unitRef="u-01">5</solar:InverterNighttimePowerConsumption>
+    <solar:InverterNighttimePowerConsumption contextRef="c-06" decimals="0" unitRef="u-01">5</solar:InverterNighttimePowerConsumption>
+    <solar:InverterCooling contextRef="c-01">Convection</solar:InverterCooling>
+    <solar:InverterCooling contextRef="c-02">Convection</solar:InverterCooling>
+    <solar:InverterCooling contextRef="c-03">Convection</solar:InverterCooling>
+    <solar:InverterCooling contextRef="c-04">Convection</solar:InverterCooling>
+    <solar:InverterCooling contextRef="c-05">Convection</solar:InverterCooling>
+    <solar:InverterCooling contextRef="c-06">Convection</solar:InverterCooling>
+    <solar:EquipmentTypeWarrantyTerm contextRef="c-01">P10Y</solar:EquipmentTypeWarrantyTerm>
+    <solar:EquipmentTypeWarrantyTerm contextRef="c-02">P10Y</solar:EquipmentTypeWarrantyTerm>
+    <solar:EquipmentTypeWarrantyTerm contextRef="c-03">P10Y</solar:EquipmentTypeWarrantyTerm>
+    <solar:EquipmentTypeWarrantyTerm contextRef="c-04">P10Y</solar:EquipmentTypeWarrantyTerm>
+    <solar:EquipmentTypeWarrantyTerm contextRef="c-05">P10Y</solar:EquipmentTypeWarrantyTerm>
+    <solar:EquipmentTypeWarrantyTerm contextRef="c-06">P10Y</solar:EquipmentTypeWarrantyTerm>
+    <solar:InverterCertificationListing contextRef="c-01">UL 1741, UL 1998, UL 1699B, IEEE1547, FCC Part 15 (Class A &amp; B), CAN/CSA V22.2 107.1-1</solar:InverterCertificationListing>
+    <solar:InverterCertificationListing contextRef="c-02">UL 1741, UL 1998, UL 1699B, IEEE1547, FCC Part 15 (Class A &amp; B), CAN/CSA V22.2 107.1-2</solar:InverterCertificationListing>
+    <solar:InverterCertificationListing contextRef="c-03">UL 1741, UL 1998, UL 1699B, IEEE1547, FCC Part 15 (Class A &amp; B), CAN/CSA V22.2 107.1-3</solar:InverterCertificationListing>
+    <solar:InverterCertificationListing contextRef="c-04">UL 1741, UL 1998, UL 1699B, IEEE1547, FCC Part 15 (Class A &amp; B), CAN/CSA V22.2 107.1-4</solar:InverterCertificationListing>
+    <solar:InverterCertificationListing contextRef="c-05">UL 1741, UL 1998, UL 1699B, IEEE1547, FCC Part 15 (Class A &amp; B), CAN/CSA V22.2 107.1-5</solar:InverterCertificationListing>
+    <solar:InverterCertificationListing contextRef="c-06">UL 1741, UL 1998, UL 1699B, IEEE1547, FCC Part 15 (Class A &amp; B), CAN/CSA V22.2 107.1-6</solar:InverterCertificationListing>
+    <solar:InverterHasCertificationUL1741 contextRef="c-01">true</solar:InverterHasCertificationUL1741>
+    <solar:InverterHasCertificationUL1741 contextRef="c-02">true</solar:InverterHasCertificationUL1741>
+    <solar:InverterHasCertificationUL1741 contextRef="c-03">true</solar:InverterHasCertificationUL1741>
+    <solar:InverterHasCertificationUL1741 contextRef="c-04">true</solar:InverterHasCertificationUL1741>
+    <solar:InverterHasCertificationUL1741 contextRef="c-05">true</solar:InverterHasCertificationUL1741>
+    <solar:InverterHasCertificationUL1741 contextRef="c-06">true</solar:InverterHasCertificationUL1741>
+</xbrl>
