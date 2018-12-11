@@ -303,7 +303,8 @@
       "aspects": {
         "xbrl:concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -313,7 +314,8 @@
       "aspects": {
         "xbrl:concept": "us-gaap:AccountsReceivableNet",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -323,7 +325,8 @@
       "aspects": {
         "xbrl:concept": "us-gaap:PrepaidExpenseCurrentAndNoncurrent",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -333,7 +336,8 @@
       "aspects": {
         "xbrl:concept": "solar:AssetsSolarFacilities",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -343,7 +347,8 @@
       "aspects": {
         "xbrl:concept": "us-gaap:Assets",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -353,7 +358,8 @@
       "aspects": {
         "xbrl:concept": "us-gaap:AccountsPayableAndAccruedLiabilitiesCurrentAndNoncurrent",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -363,7 +369,8 @@
       "aspects": {
         "xbrl:concept": "us-gaap:DueToRelatedPartiesCurrentAndNoncurrent",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -373,7 +380,8 @@
       "aspects": {
         "xbrl:concept": "us-gaap:DeferredRentCredit",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -383,7 +391,8 @@
       "aspects": {
         "xbrl:concept": "us-gaap:AssetRetirementObligation",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -393,7 +402,8 @@
       "aspects": {
         "xbrl:concept": "us-gaap:Liabilities",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -403,7 +413,8 @@
       "aspects": {
         "xbrl:concept": "us-gaap:MembersEquity",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -413,7 +424,8 @@
       "aspects": {
         "xbrl:concept": "us-gaap:LiabilitiesAndStockholdersEquity",
         "xbrl:entity": "JUPITER",
-        "xbrl:instant": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4217:USD"
       }
     },
@@ -540,9 +552,9 @@
     },
     {
       "id": "1d53262d-5856-49d5-9ae5-6652240c71f7",
-      "value": "John",
+      "value": "Customer Name",
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "1",
+        "solar:AccountsReceivableAgingAxis": "AccountsReceivableAgingCurrentBalanceMember",
         "xbrl:concept": "solar:AccountsReceivableCustomerName",
         "xbrl:entity": "JUPITER",
         "xbrl:periodStart": "2017-11-01T00:00:00",
@@ -554,11 +566,11 @@
       "value": 20000,
       "accuracy": 2,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "1",
+        "solar:AccountsReceivableAgingAxis": "AccountsReceivableAgingCurrentBalanceMember",
         "xbrl:concept": "us-gaap:AccountsReceivableGross",
         "xbrl:entity": "JUPITER",
         "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
+        "xbrl:periodEnd": "2017-11-01T00:00:00",
         "xbrl:unit": "iso4216:USD"
       }
     },
