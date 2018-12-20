@@ -111,7 +111,8 @@
         "xbrl:concept": "solar:MeasuredInsolation",
         "xbrl:entity": "JUPITER",
         "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "xbrl:periodEnd": "2017-11-30T00:00:00",
+        "xbrl:unit": "num-us:insolationItemType"
       }
     },
     {
@@ -540,37 +541,25 @@
       }
     },
     {
-      "id": "30806fb5-98e8-4264-a93b-b86d8bbdc6ad",
-      "value": 218333.40,
-      "aspects": {
-        "xbrl:concept": "solar:AccountsReceivableAgingCurrentBalanceMember",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4217:USD"
-      }
-    },
-    {
       "id": "1d53262d-5856-49d5-9ae5-6652240c71f7",
-      "value": "Customer Name",
+      "value": null,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "AccountsReceivableAgingCurrentBalanceMember",
-        "xbrl:concept": "solar:AccountsReceivableCustomerName",
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingOutstandingBalanceMember",
+        "xbrl:concept": "us-gaap:AccountsReceivableGross",
         "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-30T00:00:00",
         "xbrl:periodEnd": "2017-11-30T00:00:00"
       }
     },
     {
       "id": "26186666-1f67-4cac-929a-081cf843771a",
-      "value": 20000,
-      "accuracy": 2,
+      "value": 218333.40,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "AccountsReceivableAgingCurrentBalanceMember",
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingCurrentBalanceMember",
         "xbrl:concept": "us-gaap:AccountsReceivableGross",
         "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-30T00:00:00",
+        "xbrl:periodEnd": "2017-11-30T00:00:00",
         "xbrl:unit": "iso4216:USD"
       }
     },
@@ -578,24 +567,55 @@
       "id": "34be9ef6-de8b-4f2d-a7f1-44c224c005e1",
       "value": null,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "1",
-        "xbrl:concept": "solar:AccountsReceivableCustomerName",
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue1To30DaysMember",
+        "xbrl:concept": "us-gaap:AccountsReceivableGross",
         "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
+        "xbrl:periodStart": "2017-11-30T00:00:00",
         "xbrl:periodEnd": "2017-11-30T00:00:00"
       }
     },
     {
       "id": "784fa8a7-39b9-4b57-a71f-c1f5fdcbc8ea",
       "value": null,
-      "accuracy": 2,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "1",
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue31To60DaysMember",
         "xbrl:concept": "us-gaap:AccountsReceivableGross",
         "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4216:USD"
+        "xbrl:periodStart": "2017-11-30T00:00:00",
+        "xbrl:periodEnd": "2017-11-30T00:00:00"
+      }
+    },
+    {
+      "id": "65a50885-379e-4c6f-916f-f145fa08c7ab",
+      "value": null,
+      "aspects": {
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue61To90DaysMember",
+        "xbrl:concept": "us-gaap:AccountsReceivableGross",
+        "xbrl:entity": "JUPITER",
+        "xbrl:periodStart": "2017-11-30T00:00:00",
+        "xbrl:periodEnd": "2017-11-30T00:00:00"
+      }
+    },
+    {
+      "id": "78c2630c-30b7-4b61-ad32-31f9e4a82db1",
+      "value": null,
+      "aspects": {
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue91To120DaysMember",
+        "xbrl:concept": "us-gaap:AccountsReceivableGross",
+        "xbrl:entity": "JUPITER",
+        "xbrl:periodStart": "2017-11-30T00:00:00",
+        "xbrl:periodEnd": "2017-11-30T00:00:00"
+      }
+    },
+    {
+      "id": "578b109d-0977-445a-aa58-3088a86b695d",
+      "value": null,
+      "aspects": {
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDueOver120DaysMember",
+        "xbrl:concept": "us-gaap:AccountsReceivableGross",
+        "xbrl:entity": "JUPITER",
+        "xbrl:periodStart": "2017-11-30T00:00:00",
+        "xbrl:periodEnd": "2017-11-30T00:00:00"
       }
     },
     {
@@ -619,7 +639,7 @@
         "solar:ProjectIdentifierAxis": "JUPITER",
         "solar:CashDistributionAxis": "PREFERRED",
         "solar:InvestmentClassAxis": "A",
-        "xbrl:concept": "us-gaap:PartnersCapitalAccount",
+        "xbrl:concept": "us-gaap:PartnersCapitalAccountReturnOfCapital",
         "xbrl:entity": "JUPITER",
         "xbrl:periodStart": "2017-11-01T00:00:00",
         "xbrl:periodEnd": "2017-11-30T00:00:00",
@@ -647,7 +667,7 @@
         "solar:ProjectIdentifierAxis": "JUPITER",
         "solar:CashDistributionAxis": "OTHER",
         "solar:InvestmentClassAxis": "A",
-        "xbrl:concept": "us-gaap:PartnersCapitalAccount",
+        "xbrl:concept": "us-gaap:PartnersCapitalAccountReturnOfCapital",
         "xbrl:entity": "JUPITER",
         "xbrl:periodStart": "2017-11-01T00:00:00",
         "xbrl:periodEnd": "2017-11-30T00:00:00",
@@ -675,7 +695,7 @@
         "solar:ProjectIdentifierAxis": "JUPITER",
         "solar:CashDistributionAxis": "CASH_DISTRIBUTION",
         "solar:InvestmentClassAxis": "B",
-        "xbrl:concept": "us-gaap:PartnersCapitalAccount",
+        "xbrl:concept": "us-gaap:PartnersCapitalAccountReturnOfCapital",
         "xbrl:entity": "JUPITER",
         "xbrl:periodStart": "2017-11-01T00:00:00",
         "xbrl:periodEnd": "2017-11-30T00:00:00",
@@ -703,7 +723,7 @@
         "solar:ProjectIdentifierAxis": "JUPITER",
         "solar:CashDistributionAxis": "CASH_DISTRIBUTION",
         "solar:InvestmentClassAxis": "C",
-        "xbrl:concept": "us-gaap:PartnersCapitalAccount",
+        "xbrl:concept": "us-gaap:PartnersCapitalAccountReturnOfCapital",
         "xbrl:entity": "JUPITER",
         "xbrl:periodStart": "2017-11-01T00:00:00",
         "xbrl:periodEnd": "2017-11-30T00:00:00",
