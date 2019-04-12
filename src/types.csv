@@ -1,0 +1,76 @@
+dei:legalEntityIdentifierItemType,5493006MHB84DD0ZWV18
+nonnum:domainItemType,UNKNOWN
+num-us:electricCurrentItemType,99.99
+num-us:frequencyItemType,99.99
+num-us:insolationItemType,99.99
+num-us:irradianceItemType,99.99
+num-us:planeAngleItemType,33.33
+num-us:pressureItemType,99.99
+num-us:speedItemType,99.99
+num-us:temperatureItemType,99.99
+num-us:voltageItemType,99.99
+num:areaItemType,99.99
+num:energyItemType,99.99
+num:lengthItemType,99.99
+num:massItemType,99.99
+num:percentItemType,99.99
+num:powerItemType,99.99
+num:volumeItemType,9.9
+solar-types:DERItemType,"Storage"
+solar-types:aLTASurveyItemType,"Preliminary"
+solar-types:batteryChemistryItemType,"NiCad"
+solar-types:batteryConnectionItemType,"DC-Coupled"
+solar-types:climateClassificationKoppenItemType,"2.4.1 Hot summer continental climates"
+solar-types:climateZoneANSIItemType,"Mixed - Marine"
+solar-types:communicationProtocolItemType,"Modbus"
+solar-types:deviceItemType,"BatteryManagementSystemMember"
+solar-types:distributedGenOrUtilityScaleItemType,"Distributed Generation"
+solar-types:divisionStateApprovalStatusItemType,"Final Approval"
+solar-types:eventSeverityItemType,"Moderate"
+solar-types:feeStatusItemType,"Fully Paid"
+solar-types:fundStatusItemType,"Committed"
+solar-types:gISFileFormatItemType,"GEOJson"
+solar-types:hedgeItemType,"Revenue Put"
+solar-types:insuranceItemType,"Surety Solar Module Supply Bond"
+solar-types:internetConnectionItemType,"Dedicated Broadband"
+solar-types:inverterItemType,"MicroInverter"
+solar-types:inverterPhaseItemType,"Three Phase WYE"
+solar-types:investmentStatusItemType,"Partial Funding"
+solar-types:mORLevelItemType,"Fund Level"
+solar-types:moduleItemType,"BiFacial"
+solar-types:moduleOrientationItemType,"Portrait"
+solar-types:moduleTechnologyItemType,"Multi-C-Si"
+solar-types:mountingItemType,"Ballasted"
+solar-types:occupancyItemType,"Owner Occupied"
+solar-types:optimizerTypeItemType,"Attached"
+solar-types:participantItemType,"Workers Compensation Insurer"
+solar-types:preventiveMaintenanceTaskStatusItemType,"Incomplete"
+solar-types:projectAssetTypeItemType,"Solar Plus Storage"
+solar-types:projectClassItemType,"Community Solar"
+solar-types:projectInterconnectionItemType,"Virtual Net Meter"
+solar-types:projectPhaseItemType,"Early Construction"
+solar-types:projectStageItemType,"In Operation"
+solar-types:regulatoryApprovalStatusItemType,"Not Submitted"
+solar-types:regulatoryFacilityItemType,"EWG"
+solar-types:reserveCollateralItemType,"Letter of Credit"
+solar-types:reserveUseItemType,"Maintenance"
+solar-types:roofItemType,"Thermoplastic Polyolefin"
+solar-types:roofSlopeItemType,"Steep"
+solar-types:siteControlItemType,"Lease"
+solar-types:solarSystemCharacterItemType,"Agricultural"
+solar-types:sparePartsStatusItemType,"Insufficient"
+solar-types:systemAvailabilityModeItemType,"Islanded"
+solar-types:systemOperationalStatusItemType,"Communication Failure"
+solar-types:titlePolicyInsuranceItemType,"Pro Forma"
+solar-types:trackerItemType,"Azimuth Axis Tracking"
+solar-types:zoningPermitPropertyItemType,"Gen Tie Line"
+us-types:perUnitItemType,UNKNOWN
+xbrli:anyURIItemType,http://www.google.com
+xbrli:booleanItemType,false
+xbrli:dateItemType,2018-01-02
+xbrli:decimalItemType,99.99
+xbrli:durationItemType,UNKNOWN
+xbrli:integerItemType,99
+xbrli:monetaryItemType,9999.99
+xbrli:pureItemType,UNKNOWN
+xbrli:stringItemType,"Sample String"
