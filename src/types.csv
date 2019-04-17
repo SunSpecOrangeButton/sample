@@ -18,16 +18,27 @@ num:powerItemType,99.99
 num:volumeItemType,9.9
 solar-types:DERItemType,"Storage"
 solar-types:aLTASurveyItemType,"Preliminary"
+solar-types:approvalRequestItemType,"Conditional Approval"
+solar-types:approvalStatusItemType,"Closed"
+solar-types:assetSecuredItemType,"Bank Account"
 solar-types:batteryChemistryItemType,"NiCad"
 solar-types:batteryConnectionItemType,"DC-Coupled"
 solar-types:climateClassificationKoppenItemType,"2.4.1 Hot summer continental climates"
 solar-types:climateZoneANSIItemType,"Mixed - Marine"
 solar-types:communicationProtocolItemType,"Modbus"
+solar-types:creditSupportStatusItemType,"Granted"
 solar-types:deviceItemType,"BatteryManagementSystemMember"
 solar-types:distributedGenOrUtilityScaleItemType,"Distributed Generation"
 solar-types:divisionStateApprovalStatusItemType,"Final Approval"
+solar-types:employeeLevelItemType,"Lead"
+solar-types:employeeRoleItemType,"Project"
+solar-types:energyBudgetPhaseItemType,"Initial Funding"
 solar-types:eventSeverityItemType,"Moderate"
+solar-types:eventStatusItemType,"In Process"
 solar-types:feeStatusItemType,"Fully Paid"
+solar-types:financialTransactionItemType,"Book Transfer Debit"
+solar-types:financingEventItemType,"Closing"
+solar-types:fundOrProjectItemType,"Fund"
 solar-types:fundStatusItemType,"Committed"
 solar-types:gISFileFormatItemType,"GEOJson"
 solar-types:hedgeItemType,"Revenue Put"
@@ -56,13 +67,17 @@ solar-types:reserveCollateralItemType,"Letter of Credit"
 solar-types:reserveUseItemType,"Maintenance"
 solar-types:roofItemType,"Thermoplastic Polyolefin"
 solar-types:roofSlopeItemType,"Steep"
+solar-types:securityInterestItemType,"Deed of Trust"
+solar-types:securityInterestStatusItemType,"Not Due"
 solar-types:siteControlItemType,"Lease"
 solar-types:solarSystemCharacterItemType,"Agricultural"
 solar-types:sparePartsStatusItemType,"Insufficient"
+solar-types:sPVOrCounterpartyItemType,"Counterparty"
 solar-types:systemAvailabilityModeItemType,"Islanded"
 solar-types:systemOperationalStatusItemType,"Communication Failure"
 solar-types:titlePolicyInsuranceItemType,"Pro Forma"
 solar-types:trackerItemType,"Azimuth Axis Tracking"
+solar-types:uuidXbrlItemType,2b1d17d7-70cd-4a51-951a-76aaa2d83754
 solar-types:zoningPermitPropertyItemType,"Gen Tie Line"
 us-types:perUnitItemType,UNKNOWN
 xbrli:anyURIItemType,http://www.google.com
@@ -72,5 +87,6 @@ xbrli:decimalItemType,99.99
 xbrli:durationItemType,UNKNOWN
 xbrli:integerItemType,99
 xbrli:monetaryItemType,9999.99
+xbrli:normalizedStringItemType,"One &amp Two"
 xbrli:pureItemType,UNKNOWN
 xbrli:stringItemType,"Sample String"

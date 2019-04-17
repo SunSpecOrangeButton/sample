@@ -5,13 +5,12 @@ import sys
 
 ENTITY = "PLUTO"
 
-# This table fails - the reason why is not fully understood.
-skip = ["SiteLease",
+# Currently certain tables fail - more work is needed to determine why.
+# Generating All neither works (seems to enter an endless loop) nor is it useful.
+skip = [
     "IECRECertificate",
     "FinancialPerformance",
-    "SystemDeviceListing",
-    "System",
-    "CutSheet",
+    "Project",
     "ProjectFinancing",
     "All"
 ]
@@ -48,10 +47,18 @@ for en in tax.semantic.get_all_entrypoints():
 
     print("Processing:", en)
 
+    # TODO: Change dev_validation_off to false in order to force additional rules
+    # on the templates created.  Unfortunatley this program needs additional logic
+    # to run correctly in this mode but it will also create more accurate templates
+    # once this is done.
     entrypoint = data_model.OBInstance(en, tax, dev_validation_off=True)
     relationships = tax.semantic.get_entrypoint_relationships(en)
 
     for concept_name in tax.semantic.get_entrypoint_concepts(en):
+
+        # Skip erroneous taxonomy concepts which end with _1.
+        if concept_name.endswith("_1"):
+            continue
 
         c = tax.semantic.get_concept_details(concept_name)
         table = entrypoint.get_table_for_concept(c.id)
