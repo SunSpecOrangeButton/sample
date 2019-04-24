@@ -16,36 +16,10 @@ skip = [
 ]
 
 types = {}
+out_dn = ""
 
-if len(sys.argv) != 3:
-    print("Incorrect number of arguments - 2 required")
-    print("  Path and filename to types input file (example: types.csv)")
-    print("  Path to Output directory (example: ./somepath/outdir)")
-    sys.exit(1)
 
-types_fn = sys.argv[1]
-out_dn = sys.argv[2]
-
-with open(types_fn, "r") as infile:
-    reader = csv.reader(infile, delimiter=",")
-    for row in reader:
-        if row[0] in ["xbrli:decimalItemType", "xbrli:monetaryItemType"]:
-            types[row[0]] = float(row[1])
-        elif row[0] == "xbrli:integerItemType":
-            types[row[0]] = int(row[1])
-        elif row[0] == "xbrli:booleanItemType":
-            types[row[0]] = bool(row[1])
-        else:
-            types[row[0]] = row[1]
-
-tax = taxonomy.Taxonomy()
-for en in tax.semantic.get_all_entrypoints():
-
-    if en in skip:
-        print("Skipping:", en)
-        continue
-
-    print("Processing:", en)
+def process(en):
 
     # TODO: Change dev_validation_off to false in order to force additional rules
     # on the templates created.  Unfortunatley this program needs additional logic
@@ -114,5 +88,41 @@ for en in tax.semantic.get_all_entrypoints():
                 print("Exception processing", c.id)
                 print(e)
 
-    entrypoint.to_JSON(out_dn + "/" + en + ".json")
-    entrypoint.to_XML(out_dn + "/" + en + ".xml")
+        entrypoint.to_JSON(out_dn + "/" + en + ".json")
+        entrypoint.to_XML(out_dn + "/" + en + ".xml")
+
+
+if len(sys.argv) != 3 and len(sys.argv) != 4:
+    print("Incorrect number of arguments - 2 required")
+    print("  Path and filename to types input file (example: types.csv)")
+    print("  Path to Output directory (example: ./somepath/outdir)")
+    print("  Entrypoint (optional - default is to procss all entrypoints)")
+    sys.exit(1)
+
+types_fn = sys.argv[1]
+out_dn = sys.argv[2]
+
+with open(types_fn, "r") as infile:
+    reader = csv.reader(infile, delimiter=",")
+    for row in reader:
+        if row[0] in ["xbrli:decimalItemType", "xbrli:monetaryItemType"]:
+            types[row[0]] = float(row[1])
+        elif row[0] == "xbrli:integerItemType":
+            types[row[0]] = int(row[1])
+        elif row[0] == "xbrli:booleanItemType":
+            types[row[0]] = bool(row[1])
+        else:
+            types[row[0]] = row[1]
+
+tax = taxonomy.Taxonomy()
+
+if len(sys.argv) == 4:
+    print("Processing:", sys.argv[3])
+    process(sys.argv[3])
+else:
+    for en in tax.semantic.get_all_entrypoints():
+        if en in skip:
+            print("Skipping:", en)
+            continue
+        print("Processing:", en)
+        process(en)
