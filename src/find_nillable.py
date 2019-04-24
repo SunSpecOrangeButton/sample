@@ -10,17 +10,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import taxonomy
+from oblib import taxonomy
 
 tax = taxonomy.Taxonomy()
 
 false_count = 0
 true_count = 0
 
+print()
 print("Nillable fields List:")
-for key, e in tax.semantic.elements().items():
+print("=====================")
+
+for key, e in tax.semantic.get_all_concepts(details=True).items():
     if not e.nillable:
-        print(e)
+        print(e.name)
         false_count += 1
     else:
         true_count += 1
@@ -28,4 +31,4 @@ for key, e in tax.semantic.elements().items():
 print()
 print("Number of True values found: ", true_count)
 print("Number of False values found: ", false_count)
-
+print()

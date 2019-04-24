@@ -17,7 +17,7 @@ available at http://www.graphviz.org/.
 
 import sys
 
-import taxonomy
+from oblib import taxonomy
 
 if len(sys.argv) != 2:
     print("Program requires the name of an Entry Point")
@@ -25,7 +25,7 @@ if len(sys.argv) != 2:
 
 tax = taxonomy.Taxonomy()
 
-relationships = tax.semantic.relationships_ep(sys.argv[1])
+relationships = tax.semantic.get_entrypoint_relationships(sys.argv[1])
 if relationships is None:
     print("Entry Point command line argument does not exist in Taxonomy.")
     sys.exit()
@@ -34,5 +34,5 @@ print("digraph G {")
 if relationships is not None:
     for r in relationships:
         print('    %s -> %s;' %
-                ( r['from'].split(":")[1], r['to'].split(":")[1]))
+                ( r.from_.split(":")[1], r.to.split(":")[1]))
 print("}")
