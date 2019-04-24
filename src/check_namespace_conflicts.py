@@ -11,19 +11,19 @@
 # limitations under the License.
 
 """
-This program runs through all concepts and marks whether they are in the US-GAAP or SOLAR
-namespaces.  It will print warnings for any concepts that are not in either of the namespaces
+This program runs through all concepts and marks whether they are in the US-GAAP, DEI or SOLAR
+namespaces.  It will print warnings for any concepts that are not in any of the namespaces
 and also list any concepts that are present in both namespaces.
 """
 
-import taxonomy
+from oblib import taxonomy
 
 tax = taxonomy.Taxonomy()
 concepts = {}
 
-eps = tax.semantic.entry_points()
-for ep in eps:
-    cc = tax.semantic.concepts_ep(ep)
+entrypoints = tax.semantic.get_all_entrypoints()
+for entrypoint in entrypoints:
+    cc = tax.semantic.get_entrypoint_concepts(entrypoint)
     for c in cc:
         parts = c.split(":")
         if parts[1] in concepts:
@@ -32,19 +32,26 @@ for ep in eps:
                 namespaces[0] = True
             elif parts[0] == "solar":
                 namespaces[1] = True
+            elif parts[0] == "dei":
+                namespaces[2] = True
             else:
                 print("Warning, alternative namespace found ", c)
         else:
-            namespaces = [False, False]
+            namespaces = [False, False, False]
             if parts[0] == "us-gaap":
                 namespaces[0] = True
             elif parts[0] == "solar":
                 namespaces[1] = True
+            elif parts[0] == "dei":
+                namespaces[2] = True
             else:
                 print("Warning, alternative namespace found ", c)
             concepts[parts[1]] = namespaces
 
+print("List of namespace conflicts")
+print("===========================")
 for concept in concepts:
     namespace = concepts[concept]
-    if namespace[0] and namespace[1]:
+    if (namespace[0] and namespace[1]) or (namespace[0] and namespace[2]) or (namespace[1] and namespace[2]):
         print(concept, concepts[concept])
+print()
