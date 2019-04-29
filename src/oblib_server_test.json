@@ -1,0 +1,44 @@
+{
+  "documentType": "http://www.xbrl.org/WGWD/YYYY-MM-DD/xbrl-json",
+  "prefixes": {
+    "xmlns": "http://www.xbrl.org/2003/instance",
+    "xmlns:link": "http://www.xbrl.org/2003/linkbase",
+    "xmlns:xlink": "http://www.w3.org/1999/xlink",
+    "xmlns:xsi": "http://www.w3.org/2001/XMRLSchema-instance",
+    "xmlns:units": "http://www.xbrl.org/2009/utr",
+    "xmlns:xbrldi": "http://xbrl.org/2006/xbrldi",
+    "xmlns:solar": "http://xbrl.us/Solar/v1.2/2018-03-31/solar"
+  },
+  "dtsReferences": [
+    {
+      "type": "schema",
+      "href": "https://raw.githubusercontent.com/xbrlus/solar/v1.2/core/solar_2018-03-31_r01.xsd"
+    }
+  ],
+  "facts": {
+    "70c47d8e-1266-49c4-8926-ff8db3212697": {
+      "aspects": {
+        "entity": null,
+        "solar:UtilityIdentifierAxis": "62511403-0fe9-4775-a9c3-7b1b59e497c0",
+        "concept": "solar:UtilityName"
+      },
+      "value": "One Million Horsepower Solar"
+    },
+    "a36736e3-726e-4bbe-887a-6a69752f11e3": {
+      "aspects": {
+        "entity": null,
+        "solar:UtilityIdentifierAxis": "62511403-0fe9-4775-a9c3-7b1b59e497c0",
+        "concept": "solar:UtilityContactNameAndTitle"
+      },
+      "value": "Mr Ed, The Talking Horse"
+    },
+    "6441873f-d480-4704-9e52-cf975278bf61": {
+      "aspects": {
+        "entity": null,
+        "solar:UtilityIdentifierAxis": "62511403-0fe9-4775-a9c3-7b1b59e497c0",
+        "concept": "solar:UtilityEmailAddress"
+      },
+      "value": "mred@gmail.com"
+    }
+  }
+}
