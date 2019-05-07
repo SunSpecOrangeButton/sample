@@ -13,722 +13,520 @@
       "href": "https://raw.githubusercontent.com/xbrlus/solar/v1.2/core/solar_all_2018-03-31_r01.xsd"
     }
   ],
-  "facts": [
-    {
-      "id": "16f60d57-2536-4ec3-8414-02b95d067e02",
+  "facts": {
+    "16f60d57-2536-4ec3-8414-02b95d067e02": {
       "value": true,
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportAvailabilityOfDocument",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportAvailabilityOfDocument",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "8333ad4e-24b4-42c1-83b3-fca9ef7fce55",
+    "8333ad4e-24b4-42c1-83b3-fca9ef7fce55": {
       "value": true,
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportAvailabilityOfFinalDocument",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportAvailabilityOfFinalDocument",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "d1d82cfc-8fec-48c1-a1b6-9e3baee698b0",
+    "d1d82cfc-8fec-48c1-a1b6-9e3baee698b0": {
       "value": false,
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportAvailabilityOfDocumentExceptions",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportAvailabilityOfDocumentExceptions",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "3b58b4ce-db6a-4358-abec-73324a6d36ef",
+    "3b58b4ce-db6a-4358-abec-73324a6d36ef": {
       "value": null,
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportExceptionDescription",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportExceptionDescription",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "b9819f1c-d549-4c9c-9c64-70e20860f78e",
+    "b9819f1c-d549-4c9c-9c64-70e20860f78e": {
       "value": null,
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportCounterparties",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportCounterparties",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "6209b33d-6d07-459d-9c82-74332b8e07df",
+    "6209b33d-6d07-459d-9c82-74332b8e07df": {
       "value": "2017-11-01",
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportEffectiveDate",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportEffectiveDate",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "970864da-054b-4880-bee0-d24af9d43cb4",
+    "970864da-054b-4880-bee0-d24af9d43cb4": {
       "value": "2017-11-30",
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportEndDate",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportEndDate",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "0ee96a05-b248-4e52-b8f4-0ec77943b3db",
+    "0ee96a05-b248-4e52-b8f4-0ec77943b3db": {
       "value": null,
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportDocumentLink",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportDocumentLink",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "0d2ae079-7791-4066-98fc-14b820042b0c",
+    "0d2ae079-7791-4066-98fc-14b820042b0c": {
       "value": "JUPITER",
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportPreparerName",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportPreparerName",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "4a70ae1e-6e70-4e97-b5cd-1dac4cab25a9",
+    "4a70ae1e-6e70-4e97-b5cd-1dac4cab25a9": {
       "value": 151.92,
       "aspects": {
-        "xbrl:concept": "solar:MeasuredInsolation",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "num-us:insolationItemType"
+        "concept": "solar:MeasuredInsolation",
+        "entity": "JUPITER",
+        "unit": "num-us:insolationItemType",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "eb6b6ad4-28a8-460c-8c44-b2a326e84e08",
+    "eb6b6ad4-28a8-460c-8c44-b2a326e84e08": {
       "value": 162,
       "aspects": {
-        "xbrl:concept": "solar:ExpectedInsolationAtP50",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:ExpectedInsolationAtP50",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "248a27c2-32aa-4279-8661-df356f0530aa",
+    "248a27c2-32aa-4279-8661-df356f0530aa": {
       "value": 94,
       "aspects": {
-        "xbrl:concept": "solar:RatioMeasuredInsolationToP50",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:RatioMeasuredInsolationToP50",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "3ba11d10-b462-49a8-8cfc-bc7705e5df7b",
-      "value": 3164.80,
+    "3ba11d10-b462-49a8-8cfc-bc7705e5df7b": {
+      "value": 3164.8,
       "aspects": {
-        "xbrl:concept": "solar:MeasuredEnergy",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "SI:MWh"
+        "concept": "solar:MeasuredEnergy",
+        "entity": "JUPITER",
+        "unit": "SI:MWh",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "6e714517-06e4-46e2-b9b2-a776117dba2b",
+    "6e714517-06e4-46e2-b9b2-a776117dba2b": {
       "value": 3402,
       "aspects": {
-        "xbrl:concept": "solar:ExpectedEnergyAtTheRevenueMeter",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "SI:MWh"
+        "concept": "solar:ExpectedEnergyAtTheRevenueMeter",
+        "entity": "JUPITER",
+        "unit": "SI:MWh",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "ca04f936-85d9-43f7-8785-9587da424266",
+    "ca04f936-85d9-43f7-8785-9587da424266": {
       "value": 80.58,
       "aspects": {
-        "xbrl:concept": "solar:PerformanceRatioNonWeatherCorrected",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:PerformanceRatioNonWeatherCorrected",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "9fabb3bb-d933-4203-9c95-f71972ec415f",
+    "9fabb3bb-d933-4203-9c95-f71972ec415f": {
       "value": null,
       "aspects": {
-        "xbrl:concept": "solar:PerformanceRatioWeatherCorrected",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:PerformanceRatioWeatherCorrected",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "c49db6b3-da79-4e94-8226-71ca30d2e0c7",
+    "c49db6b3-da79-4e94-8226-71ca30d2e0c7": {
       "value": null,
       "aspects": {
-        "xbrl:concept": "solar:Curtailment",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "SI:MWh"
+        "concept": "solar:Curtailment",
+        "entity": "JUPITER",
+        "unit": "SI:MWh",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "b720a48a-3661-428f-9b80-8fe5f7daa465",
+    "b720a48a-3661-428f-9b80-8fe5f7daa465": {
       "value": null,
       "aspects": {
-        "xbrl:concept": "solar:PerformanceRatioMethodology",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:PerformanceRatioMethodology",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "d5ead87b-58c6-4aab-9795-e7e92ca0bcf2",
+    "d5ead87b-58c6-4aab-9795-e7e92ca0bcf2": {
       "value": 96.23,
       "aspects": {
-        "xbrl:concept": "solar:MeasuredEnergyAvailabilityPercent",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MeasuredEnergyAvailabilityPercent",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "632741dd-9db1-414d-8bb8-4f51bc4adf4f",
+    "632741dd-9db1-414d-8bb8-4f51bc4adf4f": {
       "value": null,
       "aspects": {
-        "xbrl:concept": "solar:AvailabilityCalculationMethod",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:AvailabilityCalculationMethod",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "db279d50-646f-4477-8571-a0dede22e677",
+    "db279d50-646f-4477-8571-a0dede22e677": {
       "value": "which is -#.## % below budgeted production of ######## kWh due to below expected insolation. Overall project availability was ##.## % for the month\",None\"",
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportOverview",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportOverview",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "9a6e4772-c01a-40ce-9204-93a56b395194",
+    "9a6e4772-c01a-40ce-9204-93a56b395194": {
       "value": "None",
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportRoutinePreventativeMaintenance",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportRoutinePreventativeMaintenance",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "c56be6f2-1100-4b2b-8fd5-21534c5a7cac",
+    "c56be6f2-1100-4b2b-8fd5-21534c5a7cac": {
       "value": "None",
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportMaterialNonRoutineMaintenance",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportMaterialNonRoutineMaintenance",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "e7fbf2d9-5f8e-4527-bcad-131fe909ea4c",
+    "e7fbf2d9-5f8e-4527-bcad-131fe909ea4c": {
       "value": "None",
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportWarrantyManagement",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportWarrantyManagement",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "0ccf31a6-f210-4453-9c1f-7bb44dbd1091",
+    "0ccf31a6-f210-4453-9c1f-7bb44dbd1091": {
       "value": "None",
       "aspects": {
-        "xbrl:concept": "solar:MonthlyOperatingReportRegulatoryMattersCurtailmentandTransmissionIssues",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MonthlyOperatingReportRegulatoryMattersCurtailmentandTransmissionIssues",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "3dab0c82-bf56-430d-9577-e462271254c6",
+    "3dab0c82-bf56-430d-9577-e462271254c6": {
       "value": 3249,
       "aspects": {
-        "xbrl:concept": "solar:MeasuredEnergyWeatherAdjusted",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MeasuredEnergyWeatherAdjusted",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "51acb013-6eff-4fe5-b893-cabb5e04088d",
+    "51acb013-6eff-4fe5-b893-cabb5e04088d": {
       "value": 97,
       "aspects": {
-        "xbrl:concept": "solar:MeasuredEnergyToWeatherAdjusted",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:MeasuredEnergyToWeatherAdjusted",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "45aabe4b-04a6-4815-a928-3da5b039ccad",
+    "45aabe4b-04a6-4815-a928-3da5b039ccad": {
       "value": null,
       "aspects": {
-        "xbrl:concept": "solar:WeatherAdjustedEnergyMethodOfAdjustment",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "solar:WeatherAdjustedEnergyMethodOfAdjustment",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "bca21e43-21ce-49d8-ae52-d10c349f2ac6",
+    "bca21e43-21ce-49d8-ae52-d10c349f2ac6": {
       "value": 296782,
       "aspects": {
-        "xbrl:concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "642dce4f-a579-4f2d-80b5-f38acf4a9207",
+    "642dce4f-a579-4f2d-80b5-f38acf4a9207": {
       "value": 212665,
       "aspects": {
-        "xbrl:concept": "us-gaap:AccountsReceivableNet",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:AccountsReceivableNet",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "23f6bcf7-5401-4f10-8aa4-b7f27be5441e",
+    "23f6bcf7-5401-4f10-8aa4-b7f27be5441e": {
       "value": 65844,
       "aspects": {
-        "xbrl:concept": "us-gaap:PrepaidExpenseCurrentAndNoncurrent",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:PrepaidExpenseCurrentAndNoncurrent",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "e70d20dd-d20b-43f7-994c-2636f74e5d82",
+    "e70d20dd-d20b-43f7-994c-2636f74e5d82": {
       "value": 48305738,
       "aspects": {
-        "xbrl:concept": "solar:AssetsSolarFacilities",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "solar:AssetsSolarFacilities",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "73686556-901f-4a3b-85cd-b7160eef3837",
+    "73686556-901f-4a3b-85cd-b7160eef3837": {
       "value": 48881029,
       "aspects": {
-        "xbrl:concept": "us-gaap:Assets",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:Assets",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "997b2c50-362a-4896-ae7e-dbaec8bc4f8a",
+    "997b2c50-362a-4896-ae7e-dbaec8bc4f8a": {
       "value": -840,
       "aspects": {
-        "xbrl:concept": "us-gaap:AccountsPayableAndAccruedLiabilitiesCurrentAndNoncurrent",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:AccountsPayableAndAccruedLiabilitiesCurrentAndNoncurrent",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "4ea8dab2-d9a9-4ef6-888f-daab1852107a",
+    "4ea8dab2-d9a9-4ef6-888f-daab1852107a": {
       "value": 9372,
       "aspects": {
-        "xbrl:concept": "us-gaap:DueToRelatedPartiesCurrentAndNoncurrent",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:DueToRelatedPartiesCurrentAndNoncurrent",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "f5cb3d9b-79e4-4662-9a7a-774f6f50ba86",
+    "f5cb3d9b-79e4-4662-9a7a-774f6f50ba86": {
       "value": 73741,
       "aspects": {
-        "xbrl:concept": "us-gaap:DeferredRentCredit",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:DeferredRentCredit",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "5575bbc6-66ac-466d-bde4-27e82dd9a262",
+    "5575bbc6-66ac-466d-bde4-27e82dd9a262": {
       "value": 305057,
       "aspects": {
-        "xbrl:concept": "us-gaap:AssetRetirementObligation",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:AssetRetirementObligation",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "faba41f0-a933-4733-affe-6ce50027e1a7",
+    "faba41f0-a933-4733-affe-6ce50027e1a7": {
       "value": 387330,
       "aspects": {
-        "xbrl:concept": "us-gaap:Liabilities",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:Liabilities",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "8bd380f1-2cdd-478a-817a-dc0606863f3d",
+    "8bd380f1-2cdd-478a-817a-dc0606863f3d": {
       "value": 48363663,
       "aspects": {
-        "xbrl:concept": "us-gaap:MembersEquity",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:MembersEquity",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "b3467e70-ce3b-4cac-a4e5-0e22ed3fdc42",
+    "b3467e70-ce3b-4cac-a4e5-0e22ed3fdc42": {
       "value": 48881029,
       "aspects": {
-        "xbrl:concept": "us-gaap:LiabilitiesAndStockholdersEquity",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-01T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:LiabilitiesAndStockholdersEquity",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
       }
     },
-    {
-      "id": "685ebd6f-a8f0-48f7-9140-b884ea1345ee",
+    "685ebd6f-a8f0-48f7-9140-b884ea1345ee": {
       "value": 3644180,
       "aspects": {
-        "xbrl:concept": "us-gaap:Revenues",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:Revenues",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "30a65021-1d69-4c83-acc7-c52400861dee",
+    "30a65021-1d69-4c83-acc7-c52400861dee": {
       "value": 216179,
       "aspects": {
-        "xbrl:concept": "us-gaap:OperatingLeaseExpense",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:OperatingLeaseExpense",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "2dbc83b3-b97a-41f3-b8a0-969526b043e7",
+    "2dbc83b3-b97a-41f3-b8a0-969526b043e7": {
       "value": null,
       "aspects": {
-        "xbrl:concept": "us-gaap:OtherCostAndExpenseOperating",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:OtherCostAndExpenseOperating",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "f4ca3e99-984c-492a-a188-eb10ae5764b1",
+    "f4ca3e99-984c-492a-a188-eb10ae5764b1": {
       "value": 17953,
       "aspects": {
-        "xbrl:concept": "us-gaap:GeneralAndAdministrativeExpense",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:GeneralAndAdministrativeExpense",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "e91e6ba0-96a6-4c68-b63e-0a1672ecf558",
+    "e91e6ba0-96a6-4c68-b63e-0a1672ecf558": {
       "value": 1155600.23,
       "aspects": {
-        "xbrl:concept": "us-gaap:Depreciation",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:Depreciation",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "36f1b5e2-1246-4048-a5fb-4cdaa323aa93",
+    "36f1b5e2-1246-4048-a5fb-4cdaa323aa93": {
       "value": 448207.03,
       "aspects": {
-        "xbrl:concept": "us-gaap:AccretionExpense",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:AccretionExpense",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "30718252-d3eb-444a-b608-b38acf26f099",
+    "30718252-d3eb-444a-b608-b38acf26f099": {
       "value": null,
       "aspects": {
-        "xbrl:concept": "us-gaap:NoninterestIncome",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:NoninterestIncome",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "7fbebbf9-7852-46e6-a657-b78e3aa04037",
+    "7fbebbf9-7852-46e6-a657-b78e3aa04037": {
       "value": 13897,
       "aspects": {
-        "xbrl:concept": "us-gaap:InterestIncomeExpenseNet",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:InterestIncomeExpenseNet",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "aa45a208-3568-4012-9953-fe2907ff967f",
+    "aa45a208-3568-4012-9953-fe2907ff967f": {
       "value": 1368707,
       "aspects": {
-        "xbrl:concept": "us-gaap:NetIncomeLoss",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:NetIncomeLoss",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "f29d085a-d285-4311-a618-9d4f3a15bbb9",
+    "f29d085a-d285-4311-a618-9d4f3a15bbb9": {
       "value": 1354810,
       "aspects": {
-        "xbrl:concept": "us-gaap:OperatingExpenses",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4217:USD"
+        "concept": "us-gaap:OperatingExpenses",
+        "entity": "JUPITER",
+        "unit": "iso4217:USD",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00"
       }
     },
-    {
-      "id": "1d53262d-5856-49d5-9ae5-6652240c71f7",
+    "1d53262d-5856-49d5-9ae5-6652240c71f7": {
       "value": null,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingOutstandingBalanceMember",
-        "xbrl:concept": "us-gaap:AccountsReceivableGross",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-30T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "us-gaap:AccountsReceivableGross",
+        "entity": "JUPITER",
+        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingOutstandingBalanceMember"
       }
     },
-    {
-      "id": "26186666-1f67-4cac-929a-081cf843771a",
-      "value": 218333.40,
+    "26186666-1f67-4cac-929a-081cf843771a": {
+      "value": 218333.4,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingCurrentBalanceMember",
-        "xbrl:concept": "us-gaap:AccountsReceivableGross",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-30T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4216:USD"
+        "concept": "us-gaap:AccountsReceivableGross",
+        "entity": "JUPITER",
+        "unit": "iso4216:USD",
+        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingCurrentBalanceMember"
       }
     },
-    {
-      "id": "34be9ef6-de8b-4f2d-a7f1-44c224c005e1",
+    "34be9ef6-de8b-4f2d-a7f1-44c224c005e1": {
       "value": null,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue1To30DaysMember",
-        "xbrl:concept": "us-gaap:AccountsReceivableGross",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-30T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "us-gaap:AccountsReceivableGross",
+        "entity": "JUPITER",
+        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue1To30DaysMember"
       }
     },
-    {
-      "id": "784fa8a7-39b9-4b57-a71f-c1f5fdcbc8ea",
+    "784fa8a7-39b9-4b57-a71f-c1f5fdcbc8ea": {
       "value": null,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue31To60DaysMember",
-        "xbrl:concept": "us-gaap:AccountsReceivableGross",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-30T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "us-gaap:AccountsReceivableGross",
+        "entity": "JUPITER",
+        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue31To60DaysMember"
       }
     },
-    {
-      "id": "65a50885-379e-4c6f-916f-f145fa08c7ab",
+    "65a50885-379e-4c6f-916f-f145fa08c7ab": {
       "value": null,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue61To90DaysMember",
-        "xbrl:concept": "us-gaap:AccountsReceivableGross",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-30T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "us-gaap:AccountsReceivableGross",
+        "entity": "JUPITER",
+        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue61To90DaysMember"
       }
     },
-    {
-      "id": "78c2630c-30b7-4b61-ad32-31f9e4a82db1",
+    "78c2630c-30b7-4b61-ad32-31f9e4a82db1": {
       "value": null,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue91To120DaysMember",
-        "xbrl:concept": "us-gaap:AccountsReceivableGross",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-30T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "us-gaap:AccountsReceivableGross",
+        "entity": "JUPITER",
+        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue91To120DaysMember"
       }
     },
-    {
-      "id": "578b109d-0977-445a-aa58-3088a86b695d",
+    "578b109d-0977-445a-aa58-3088a86b695d": {
       "value": null,
       "aspects": {
-        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDueOver120DaysMember",
-        "xbrl:concept": "us-gaap:AccountsReceivableGross",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-30T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "concept": "us-gaap:AccountsReceivableGross",
+        "entity": "JUPITER",
+        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDueOver120DaysMember"
       }
     },
-    {
-      "id": "f5ac4328-baed-4293-a1e0-60bc98c7691e",
+    "f5ac4328-baed-4293-a1e0-60bc98c7691e": {
       "value": "2017-10-01T00:00:00",
       "aspects": {
-        "solar:ProjectIdentifierAxis": "JUPITER",
-        "solar:CashDistributionAxis": "PREFERRED",
-        "solar:InvestmentClassAxis": "A",
-        "xbrl:concept": "solar:PeriodOfApplicableDistribution",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
-      }
-    },
-    {
-      "id": "0afad94b-619f-446e-a475-5fdccc7f972c",
-      "value": 72036.93,
-      "accuracy": 2,
-      "aspects": {
-        "solar:ProjectIdentifierAxis": "JUPITER",
-        "solar:CashDistributionAxis": "PREFERRED",
-        "solar:InvestmentClassAxis": "A",
-        "xbrl:concept": "us-gaap:PartnersCapitalAccountReturnOfCapital",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4216:USD"
-      }
-    },
-    {
-      "id": "f5ac4328-baed-4293-a1e0-60bc98c7691e",
-      "value": "2017-10-01T00:00:00",
-      "aspects": {
-        "solar:ProjectIdentifierAxis": "JUPITER",
-        "solar:CashDistributionAxis": "OTHER",
-        "solar:InvestmentClassAxis": "A",
-        "xbrl:concept": "solar:PeriodOfApplicableDistribution",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
-      }
-    },
-    {
-      "id": "0afad94b-619f-446e-a475-5fdccc7f972c",
-      "value": 29837.60,
-      "accuracy": 2,
-      "aspects": {
-        "solar:ProjectIdentifierAxis": "JUPITER",
-        "solar:CashDistributionAxis": "OTHER",
-        "solar:InvestmentClassAxis": "A",
-        "xbrl:concept": "us-gaap:PartnersCapitalAccountReturnOfCapital",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4216:USD"
-      }
-    },
-    {
-      "id": "f5ac4328-baed-4293-a1e0-60bc98c7691e",
-      "value": "2017-10-01T00:00:00",
-      "aspects": {
+        "concept": "solar:PeriodOfApplicableDistribution",
+        "entity": "JUPITER",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00",
         "solar:ProjectIdentifierAxis": "JUPITER",
         "solar:CashDistributionAxis": "CASH_DISTRIBUTION",
-        "solar:InvestmentClassAxis": "B",
-        "xbrl:concept": "solar:PeriodOfApplicableDistribution",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
+        "solar:InvestmentClassAxis": "C"
       }
     },
-    {
-      "id": "0afad94b-619f-446e-a475-5fdccc7f972c",
-      "value": 385484.16,
+    "0afad94b-619f-446e-a475-5fdccc7f972c": {
+      "value": 0.0,
       "accuracy": 2,
       "aspects": {
+        "concept": "us-gaap:PartnersCapitalAccountReturnOfCapital",
+        "entity": "JUPITER",
+        "unit": "iso4216:USD",
+        "period": "2017-11-01T00:00:00/2017-11-30T00:00:00",
         "solar:ProjectIdentifierAxis": "JUPITER",
         "solar:CashDistributionAxis": "CASH_DISTRIBUTION",
-        "solar:InvestmentClassAxis": "B",
-        "xbrl:concept": "us-gaap:PartnersCapitalAccountReturnOfCapital",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4216:USD"
-      }
-    },
-    {
-      "id": "f5ac4328-baed-4293-a1e0-60bc98c7691e",
-      "value": "2017-10-01T00:00:00",
-      "aspects": {
-        "solar:ProjectIdentifierAxis": "JUPITER",
-        "solar:CashDistributionAxis": "CASH_DISTRIBUTION",
-        "solar:InvestmentClassAxis": "C",
-        "xbrl:concept": "solar:PeriodOfApplicableDistribution",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00"
-      }
-    },
-    {
-      "id": "0afad94b-619f-446e-a475-5fdccc7f972c",
-      "value": 0.00,
-      "accuracy": 2,
-      "aspects": {
-        "solar:ProjectIdentifierAxis": "JUPITER",
-        "solar:CashDistributionAxis": "CASH_DISTRIBUTION",
-        "solar:InvestmentClassAxis": "C",
-        "xbrl:concept": "us-gaap:PartnersCapitalAccountReturnOfCapital",
-        "xbrl:entity": "JUPITER",
-        "xbrl:periodStart": "2017-11-01T00:00:00",
-        "xbrl:periodEnd": "2017-11-30T00:00:00",
-        "xbrl:unit": "iso4216:USD"
+        "solar:InvestmentClassAxis": "C"
       }
     }
-  ]
+  }
 }
