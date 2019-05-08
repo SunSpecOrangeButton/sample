@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--extracted from OIM /Users/campbellpryde/Google Drive/Taxonomies/Solar/uml/Inverter Data Sheet.xlsx-->
+<!--extracted from OIM /Volumes/GoogleDrive/My Drive/Taxonomies/Solar/CRApril/instances/Inverter Data Sheet.xlsx-->
 <xbrl
   xmlns="http://www.xbrl.org/2003/instance"
   xmlns:link="http://www.xbrl.org/2003/linkbase"
-  xmlns:solar="http://xbrl.us/Solar/v1.1/2018-02-09/solar"
+  xmlns:solar="http://xbrl.us/Solar/v1.3/2019-02-27/solar"
   xmlns:utreg="http://www.xbrl.org/2009/utr"
   xmlns:xbrldi="http://xbrl.org/2006/xbrldi"
   xmlns:xlink="http://www.w3.org/1999/xlink">
     <link:schemaRef
-      xlink:href="/Users/campbellpryde/Google Drive/Taxonomies/Solar/PRFeb/core/solar_all_2018-02-09_r01.xsd"
+      xlink:href="https://raw.githubusercontent.com/SunSpecOrangeButton/solar-taxonomy/v1.3.0/documents/solar-cutsheet_2019-02-27_r01.xsd"
       xlink:type="simple"/>
     <context id="c-01">
         <entity>
             <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
             <segment>
-                <xbrldi:typedMember dimension="solar:ProductAxis">
-                    <solar:ProductIdentificationDomain>Sunny_Boy_3.0-US-208</solar:ProductIdentificationDomain>
+                <xbrldi:typedMember dimension="solar:ProductIdentifierAxis">
+                    <solar:ProductIdentifierDomain>b756b6e1-ee9e-48d4-a1e1-1e4a34e927af</solar:ProductIdentifierDomain>
                 </xbrldi:typedMember>
             </segment>
         </entity>
@@ -23,16 +23,13 @@
             <forever/>
         </period>
     </context>
-    <unit id="u-01">
-        <measure>utreg:W</measure>
-    </unit>
-    <solar:InverterInputMaximumPowerDC contextRef="c-01" decimals="0" unitRef="u-01">3100</solar:InverterInputMaximumPowerDC>
+    <solar:Model contextRef="c-01">Sunny Boy 3.0-US-208</solar:Model>
     <context id="c-02">
         <entity>
             <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
             <segment>
-                <xbrldi:typedMember dimension="solar:ProductAxis">
-                    <solar:ProductIdentificationDomain>Sunny_Boy_3.0-US-240</solar:ProductIdentificationDomain>
+                <xbrldi:typedMember dimension="solar:ProductIdentifierAxis">
+                    <solar:ProductIdentifierDomain>74ddc4f0-a5f5-4e35-ac90-29c5a1e56ed2</solar:ProductIdentifierDomain>
                 </xbrldi:typedMember>
             </segment>
         </entity>
@@ -40,13 +37,13 @@
             <forever/>
         </period>
     </context>
-    <solar:InverterInputMaximumPowerDC contextRef="c-02" decimals="0" unitRef="u-01">3100</solar:InverterInputMaximumPowerDC>
+    <solar:Model contextRef="c-02">Sunny Boy 3.0-US-240</solar:Model>
     <context id="c-03">
         <entity>
             <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
             <segment>
-                <xbrldi:typedMember dimension="solar:ProductAxis">
-                    <solar:ProductIdentificationDomain>Sunny_Boy_3.8-US-208</solar:ProductIdentificationDomain>
+                <xbrldi:typedMember dimension="solar:ProductIdentifierAxis">
+                    <solar:ProductIdentifierDomain>2ccb6c15-684d-46fc-992f-322db766b095</solar:ProductIdentifierDomain>
                 </xbrldi:typedMember>
             </segment>
         </entity>
@@ -54,13 +51,13 @@
             <forever/>
         </period>
     </context>
-    <solar:InverterInputMaximumPowerDC contextRef="c-03" decimals="0" unitRef="u-01">3450</solar:InverterInputMaximumPowerDC>
+    <solar:Model contextRef="c-03">Sunny Boy 3.8-US-208</solar:Model>
     <context id="c-04">
         <entity>
             <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
             <segment>
-                <xbrldi:typedMember dimension="solar:ProductAxis">
-                    <solar:ProductIdentificationDomain>Sunny_Boy_3.8-US-240</solar:ProductIdentificationDomain>
+                <xbrldi:typedMember dimension="solar:ProductIdentifierAxis">
+                    <solar:ProductIdentifierDomain>cf0fd3c1-44ab-47fe-8372-189a8bad9baf</solar:ProductIdentifierDomain>
                 </xbrldi:typedMember>
             </segment>
         </entity>
@@ -68,13 +65,13 @@
             <forever/>
         </period>
     </context>
-    <solar:InverterInputMaximumPowerDC contextRef="c-04" decimals="0" unitRef="u-01">4000</solar:InverterInputMaximumPowerDC>
+    <solar:Model contextRef="c-04">Sunny Boy 3.8-US-240</solar:Model>
     <context id="c-05">
         <entity>
             <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
             <segment>
-                <xbrldi:typedMember dimension="solar:ProductAxis">
-                    <solar:ProductIdentificationDomain>Sunny_Boy_5.0-US-208</solar:ProductIdentificationDomain>
+                <xbrldi:typedMember dimension="solar:ProductIdentifierAxis">
+                    <solar:ProductIdentifierDomain>441fa29c-bdaf-422b-91e6-edef97ccc4fe</solar:ProductIdentifierDomain>
                 </xbrldi:typedMember>
             </segment>
         </entity>
@@ -82,13 +79,14 @@
             <forever/>
         </period>
     </context>
-    <solar:InverterInputMaximumPowerDC contextRef="c-05" decimals="0" unitRef="u-01">5150</solar:InverterInputMaximumPowerDC>
+    <solar:Model contextRef="c-05">Sunny Boy 5.0-US-208</solar:Model>
     <context id="c-06">
         <entity>
             <identifier scheme="http://xbrl.org/entity/identification/scheme">SunnyBoy</identifier>
             <segment>
-                <xbrldi:typedMember dimension="solar:ProductAxis">
-                    <solar:ProductIdentificationDomain>Sunny_Boy_5.0-US-240</solar:ProductIdentificationDomain>
+                <xbrldi:typedMember dimension="solar:ProductIdentifierAxis">
+                    <solar:ProductIdentifierDomain>ba57690f-e1d5-4a1c-a712-a3d3bc352fc9
+</solar:ProductIdentifierDomain>
                 </xbrldi:typedMember>
             </segment>
         </entity>
@@ -96,6 +94,15 @@
             <forever/>
         </period>
     </context>
+    <solar:Model contextRef="c-06">Sunny Boy 5.0-US-240</solar:Model>
+    <unit id="u-01">
+        <measure>utreg:W</measure>
+    </unit>
+    <solar:InverterInputMaximumPowerDC contextRef="c-01" decimals="0" unitRef="u-01">3100</solar:InverterInputMaximumPowerDC>
+    <solar:InverterInputMaximumPowerDC contextRef="c-02" decimals="0" unitRef="u-01">3100</solar:InverterInputMaximumPowerDC>
+    <solar:InverterInputMaximumPowerDC contextRef="c-03" decimals="0" unitRef="u-01">3450</solar:InverterInputMaximumPowerDC>
+    <solar:InverterInputMaximumPowerDC contextRef="c-04" decimals="0" unitRef="u-01">4000</solar:InverterInputMaximumPowerDC>
+    <solar:InverterInputMaximumPowerDC contextRef="c-05" decimals="0" unitRef="u-01">5150</solar:InverterInputMaximumPowerDC>
     <solar:InverterInputMaximumPowerDC contextRef="c-06" decimals="0" unitRef="u-01">5150</solar:InverterInputMaximumPowerDC>
     <unit id="u-02">
         <measure>utreg:V</measure>
@@ -361,4 +368,22 @@
     <solar:InverterHasCertificationUL1741 contextRef="c-04">true</solar:InverterHasCertificationUL1741>
     <solar:InverterHasCertificationUL1741 contextRef="c-05">true</solar:InverterHasCertificationUL1741>
     <solar:InverterHasCertificationUL1741 contextRef="c-06">true</solar:InverterHasCertificationUL1741>
+    <solar:TypeOfDevice contextRef="c-01">InverterMember</solar:TypeOfDevice>
+    <solar:TypeOfDevice contextRef="c-02">InverterMember</solar:TypeOfDevice>
+    <solar:TypeOfDevice contextRef="c-03">InverterMember</solar:TypeOfDevice>
+    <solar:TypeOfDevice contextRef="c-04">InverterMember</solar:TypeOfDevice>
+    <solar:TypeOfDevice contextRef="c-05">InverterMember</solar:TypeOfDevice>
+    <solar:TypeOfDevice contextRef="c-06">InverterMember</solar:TypeOfDevice>
+    <solar:ProductManufacturer contextRef="c-01">SUNNY BOY</solar:ProductManufacturer>
+    <solar:ProductManufacturer contextRef="c-02">SUNNY BOY</solar:ProductManufacturer>
+    <solar:ProductManufacturer contextRef="c-03">SUNNY BOY</solar:ProductManufacturer>
+    <solar:ProductManufacturer contextRef="c-04">SUNNY BOY</solar:ProductManufacturer>
+    <solar:ProductManufacturer contextRef="c-05">SUNNY BOY</solar:ProductManufacturer>
+    <solar:ProductManufacturer contextRef="c-06">SUNNY BOY</solar:ProductManufacturer>
+    <solar:ProductName contextRef="c-01">Sunny Boy 3.0-US</solar:ProductName>
+    <solar:ProductName contextRef="c-02">Sunny Boy 3.0-US</solar:ProductName>
+    <solar:ProductName contextRef="c-03">Sunny Boy 3.8-US</solar:ProductName>
+    <solar:ProductName contextRef="c-04">Sunny Boy 3.8-US</solar:ProductName>
+    <solar:ProductName contextRef="c-05">Sunny Boy 5.0-US</solar:ProductName>
+    <solar:ProductName contextRef="c-06">Sunny Boy 5.0-US</solar:ProductName>
 </xbrl>
