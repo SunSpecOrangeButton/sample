@@ -24,7 +24,7 @@ using the code that is written here.
 Before running this program a database needs to be setup with the following table placed in it:
 
     CREATE TABLE utility (
-        utility_id CHAR(36),
+        utility_id int,
         name VARCHAR(80),
         contact_name_and_title VARCHAR(80),
         identifier CHAR(20),
@@ -46,9 +46,9 @@ Then use the following comand to start the REST server.
 
 Here are some working queries:
 
-    curl -X POST -H "Content-Type: application/json" -d @"oblib_server_test.json"  http://localhost:5000/utility/62511403-0fe9-4775-a9c3-7b1b59e497c0
-    curl -X GET http://localhost:5000/utility/62511403-0fe9-4775-a9c3-7b1b59e497c0
-    curl -X DELETE http://localhost:5000/utility/62511403-0fe9-4775-a9c3-7b1b59e497c0
+    curl -X POST -H "Content-Type: application/json" -d @"oblib_server_test.json"  http://localhost:5000/utility/1
+    curl -X GET http://localhost:5000/utility/1
+    curl -X DELETE http://localhost:5000/utility/1
 """
 
 from oblib import taxonomy, data_model, parser
@@ -93,8 +93,7 @@ class Utility:
         """ Load self from Orange Button JSON string"""
 
         entrypoint = ob_parser.from_JSON_string(json, "Utility")
-        print(self.utility_id)
-        ctx = data_model.Context(duration="forever", UtilityIdentifierAxis=self.utility_id)
+        ctx = entrypoint.get_all_facts()[0].context    # Note: currently assumes single context
         self.name = get_fact_value(entrypoint.get("solar:UtilityName", ctx))
         self.contact_name_and_title = get_fact_value(entrypoint.get("solar:UtilityContactNameAndTitle", ctx))
         self.identifier = get_fact_value(entrypoint.get("solar:UtilityIdentifier", ctx))
@@ -106,10 +105,10 @@ class Utility:
         entrypoint = data_model.OBInstance("Utility", ob_taxonomy)
         kwargs = {}
         kwargs["duration"] = "forever"
-        kwargs["solar:UtilityIdentifierAxis"] = self.utility_id
+        kwargs["solar:UtilityIdentifierAxis"] = self.identifier
         entrypoint.set("solar:UtilityName", self.name, **kwargs)
         entrypoint.set("solar:UtilityContactNameAndTitle", self.contact_name_and_title, **kwargs)
-        #entrypoint.set("solar:UtilityIdentifier", rec.identifier, **kwargs)
+        entrypoint.set("solar:UtilityIdentifier", self.identifier, **kwargs)
         entrypoint.set("solar:UtilityEmailAddress", self.email_address, **kwargs)
         json = ob_parser.to_JSON_string(entrypoint)
         return json

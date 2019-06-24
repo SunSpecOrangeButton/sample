@@ -19,15 +19,23 @@
     "70c47d8e-1266-49c4-8926-ff8db3212697": {
       "aspects": {
         "entity": null,
-        "solar:UtilityIdentifierAxis": "62511403-0fe9-4775-a9c3-7b1b59e497c0",
+        "solar:UtilityIdentifierAxis": "12345678901234567890",
         "concept": "solar:UtilityName"
       },
       "value": "One Million Horsepower Solar"
     },
+    "ec07b04c-f94d-4265-ac61-a2de793b3de7": {
+      "aspects": {
+        "entity": null,
+        "solar:UtilityIdentifierAxis": "12345678901234567890",
+        "concept": "solar:UtilityIdentifier"
+      },
+      "value": "12345678901234567890"
+    },
     "a36736e3-726e-4bbe-887a-6a69752f11e3": {
       "aspects": {
         "entity": null,
-        "solar:UtilityIdentifierAxis": "62511403-0fe9-4775-a9c3-7b1b59e497c0",
+        "solar:UtilityIdentifierAxis": "12345678901234567890",
         "concept": "solar:UtilityContactNameAndTitle"
       },
       "value": "Mr Ed, The Talking Horse"
@@ -35,7 +43,7 @@
     "6441873f-d480-4704-9e52-cf975278bf61": {
       "aspects": {
         "entity": null,
-        "solar:UtilityIdentifierAxis": "62511403-0fe9-4775-a9c3-7b1b59e497c0",
+        "solar:UtilityIdentifierAxis": "12345678901234567890",
         "concept": "solar:UtilityEmailAddress"
       },
       "value": "mred@gmail.com"
