@@ -24,11 +24,12 @@ using the code that is written here.
 Before running this program a database needs to be setup with the following table placed in it:
 
     CREATE TABLE utility (
-        utility_id int,
+        utility_id int NOT NULL AUTO_INCREMENT,
         name VARCHAR(80),
         contact_name_and_title VARCHAR(80),
         identifier CHAR(20),
-        email_address VARCHAR(40)
+        email_address VARCHAR(40),
+        PRIMARY KEY (utility_id)
     );
 
 And the configuration file (oblib-server.cfg) needs to be place in the startup directory.  Its contents should be:
@@ -46,9 +47,9 @@ Then use the following comand to start the REST server.
 
 Here are some working queries:
 
-    curl -X POST -H "Content-Type: application/json" -d @"oblib_server_test.json"  http://localhost:5000/utility/1
-    curl -X GET http://localhost:5000/utility/1
-    curl -X DELETE http://localhost:5000/utility/1
+    curl -X POST -H "Content-Type: application/json" -d @"oblib_server_test.json"  http://localhost:5000/utility/
+    curl -X GET http://localhost:5000/utility/5493006MHB84EE0ZWV18
+    curl -X DELETE http://localhost:5000/utility/5493006MHB84EE0ZWV18
 """
 
 from oblib import taxonomy, data_model, parser
@@ -135,18 +136,18 @@ class OrangeDb:
         cursor = OrangeDb.__connection.cursor()
         cursor.execute("""
             INSERT INTO utility (
-                utility_id, name, contact_name_and_title, identifier, email_address)
+                name, contact_name_and_title, identifier, email_address)
             VALUES(
-                %s, %s, %s, %s, %s)
-            """, (rec.utility_id, rec.name, rec.contact_name_and_title, rec.identifier, rec.email_address))
+                %s, %s, %s, %s)
+            """, (rec.name, rec.contact_name_and_title, rec.identifier, rec.email_address))
         cursor.execute("commit")
         cursor.close()
 
     def read_utility(self, rec):
         """Read utility record"""
         cursor = OrangeDb.__connection.cursor()
-        results = cursor.execute("SELECT * FROM utility WHERE utility_id=%s",
-            (rec.utility_id,))
+        results = cursor.execute("SELECT * FROM utility WHERE identifier=%s",
+            (rec.identifier,))
         for row in cursor:
             rec.utility_id = row[0]
             rec.name = row[1]
@@ -161,8 +162,8 @@ class OrangeDb:
     def delete_utility(self, rec):
         """Delete utility record"""
         cursor = OrangeDb.__connection.cursor()
-        cursor.execute("DELETE FROM utility WHERE utility_id=%s",
-            (rec.utility_id,))
+        cursor.execute("DELETE FROM utility WHERE identifier=%s",
+            (rec.identifier,))
         cursor.execute("commit")
         cursor.close()
 
@@ -192,13 +193,13 @@ app = Flask(__name__)
 """End of Main Code"""
 
 
-@app.route('/utility/<utility_id>', methods=['DELETE'])
-def delete_handler(utility_id):
+@app.route('/utility/<identifier>', methods=['DELETE'])
+def delete_handler(identifier):
     """Flask Delete Handler for utility"""
 
     try:
         rec = Utility()
-        rec.utility_id = utility_id
+        rec.identifier = identifier
         orange_db.delete_utility(rec)
         return '{"type": "Success"}'
     except Exception as e:
@@ -206,13 +207,13 @@ def delete_handler(utility_id):
         return '{"type": "Error", "message": "Input is not correct."}'
 
 
-@app.route('/utility/<utility_id>', methods=['GET'])
-def read_handler(utility_id):
+@app.route('/utility/<identifier>', methods=['GET'])
+def read_handler(identifier):
     """Flask Read Handler for utility"""
 
     try:
         rec = Utility()
-        rec.utility_id = utility_id
+        rec.identifier = identifier
         orange_db.read_utility(rec)
         json = rec.to_JSON_string()
         return '{"type": "Success", "message": ' + json + '}'
@@ -221,13 +222,12 @@ def read_handler(utility_id):
         return '{"type": "Error", "message": "Input is not correct."}'
 
 
-@app.route('/utility/<utility_id>', methods=['POST'])
-def write_hander(utility_id):
+@app.route('/utility/', methods=['POST'])
+def write_hander():
     """Flask Write Handler for utility"""
 
     try:
         rec = Utility()
-        rec.utility_id = utility_id
         rec.from_JSON_string(request.data)
         orange_db.insert_utility(rec)
         return '{"type": "Success"}'
