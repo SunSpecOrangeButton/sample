@@ -90,14 +90,26 @@ class Utility:
               "; identifier: " + str(self.identifier) + \
               "; email_address: " + str(self.email_address)
 
+    def _find_ctx(self, entrypoint):
+        """ Data_model does not find a context so this utility method is created until it is built into entrypoint """
+        facts = entrypoint.get_all_facts()
+        ctx = None
+        for f in facts:
+            if ctx:
+                if f.context != ctx:
+                    raise Exception("Mulitple contexts are not supported")
+            else:
+                ctx = f.context
+        return ctx
+
     def from_JSON_string(self, json):
         """ Load self from Orange Button JSON string"""
 
         entrypoint = ob_parser.from_JSON_string(json, "Utility")
-        ctx = entrypoint.get_all_facts()[0].context    # Note: currently assumes single context
+        ctx = self._find_ctx(entrypoint)
         self.name = get_fact_value(entrypoint.get("solar:UtilityName", ctx))
         self.contact_name_and_title = get_fact_value(entrypoint.get("solar:UtilityContactNameAndTitle", ctx))
-        self.identifier = get_fact_value(entrypoint.get("solar:UtilityIdentifier", ctx))
+        self.identifier = ctx.axes["solar:UtilityIdentifierAxis"]
         self.email_address = get_fact_value(entrypoint.get("solar:UtilityEmailAddress", ctx))
 
     def to_JSON_string(self):
@@ -233,4 +245,4 @@ def write_hander():
         return '{"type": "Success"}'
     except Exception as e:
          print(e)
-         return '{"type": "Error", "message": "Input is not correctly formatted JSON"}'
+         return '{"type": "Error", "message": "Input is not correctly formatted Orange Button JSON"}'

@@ -24,14 +24,6 @@
       },
       "value": "One Million Horsepower Solar"
     },
-    "ec07b04c-f94d-4265-ac61-a2de793b3de7": {
-      "aspects": {
-        "entity": null,
-        "solar:UtilityIdentifierAxis": "5493006MHB84EE0ZWV18",
-        "concept": "solar:UtilityIdentifier"
-      },
-      "value": "5493006MHB84EE0ZWV18"
-    },
     "a36736e3-726e-4bbe-887a-6a69752f11e3": {
       "aspects": {
         "entity": null,
