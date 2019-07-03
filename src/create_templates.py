@@ -23,13 +23,9 @@ import sys
 
 ENTITY = "PLUTO"
 
-# Currently certain tables fail - more work is needed to determine why.
-# Generating All neither works (seems to enter an endless loop) nor is it useful.
+# Entrypoints to skip - currently just All although historically other Entrypoints also had issues and were
+# included in the list.
 skip = [
-    "IECRECertificate",
-    "FinancialPerformance",
-    "Project",
-    "ProjectFinancing",
     "All"
 ]
 

@@ -248,7 +248,7 @@
         "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "642dce4f-a579-4f2d-80b5-f38acf4a9207": {
@@ -257,7 +257,7 @@
         "concept": "us-gaap:AccountsReceivableNet",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "23f6bcf7-5401-4f10-8aa4-b7f27be5441e": {
@@ -266,7 +266,7 @@
         "concept": "us-gaap:PrepaidExpenseCurrentAndNoncurrent",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "e70d20dd-d20b-43f7-994c-2636f74e5d82": {
@@ -275,7 +275,7 @@
         "concept": "solar:AssetsSolarFacilities",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "73686556-901f-4a3b-85cd-b7160eef3837": {
@@ -284,7 +284,7 @@
         "concept": "us-gaap:Assets",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "997b2c50-362a-4896-ae7e-dbaec8bc4f8a": {
@@ -293,7 +293,7 @@
         "concept": "us-gaap:AccountsPayableAndAccruedLiabilitiesCurrentAndNoncurrent",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "4ea8dab2-d9a9-4ef6-888f-daab1852107a": {
@@ -302,7 +302,7 @@
         "concept": "us-gaap:DueToRelatedPartiesCurrentAndNoncurrent",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "f5cb3d9b-79e4-4662-9a7a-774f6f50ba86": {
@@ -311,7 +311,7 @@
         "concept": "us-gaap:DeferredRentCredit",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "5575bbc6-66ac-466d-bde4-27e82dd9a262": {
@@ -320,7 +320,7 @@
         "concept": "us-gaap:AssetRetirementObligation",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "faba41f0-a933-4733-affe-6ce50027e1a7": {
@@ -329,7 +329,7 @@
         "concept": "us-gaap:Liabilities",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "8bd380f1-2cdd-478a-817a-dc0606863f3d": {
@@ -338,7 +338,7 @@
         "concept": "us-gaap:MembersEquity",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "b3467e70-ce3b-4cac-a4e5-0e22ed3fdc42": {
@@ -347,7 +347,7 @@
         "concept": "us-gaap:LiabilitiesAndStockholdersEquity",
         "entity": "JUPITER",
         "unit": "iso4217:USD",
-        "period": "2017-11-01T00:00:00/2017-11-01T00:00:00"
+        "period": "2017-11-01T00:00:00"
       }
     },
     "685ebd6f-a8f0-48f7-9140-b884ea1345ee": {
@@ -445,7 +445,7 @@
       "aspects": {
         "concept": "us-gaap:AccountsReceivableGross",
         "entity": "JUPITER",
-        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "period": "2017-11-30T00:00:00",
         "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingOutstandingBalanceMember"
       }
     },
@@ -455,7 +455,7 @@
         "concept": "us-gaap:AccountsReceivableGross",
         "entity": "JUPITER",
         "unit": "iso4216:USD",
-        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "period": "2017-11-30T00:00:00",
         "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingCurrentBalanceMember"
       }
     },
@@ -464,7 +464,7 @@
       "aspects": {
         "concept": "us-gaap:AccountsReceivableGross",
         "entity": "JUPITER",
-        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "period": "2017-11-30T00:00:00",
         "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue1To30DaysMember"
       }
     },
@@ -473,7 +473,7 @@
       "aspects": {
         "concept": "us-gaap:AccountsReceivableGross",
         "entity": "JUPITER",
-        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "period": "2017-11-30T00:00:00",
         "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue31To60DaysMember"
       }
     },
@@ -482,7 +482,7 @@
       "aspects": {
         "concept": "us-gaap:AccountsReceivableGross",
         "entity": "JUPITER",
-        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "period": "2017-11-30T00:00:00",
         "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue61To90DaysMember"
       }
     },
@@ -491,7 +491,7 @@
       "aspects": {
         "concept": "us-gaap:AccountsReceivableGross",
         "entity": "JUPITER",
-        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "period": "2017-11-30T00:00:00",
         "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDue91To120DaysMember"
       }
     },
@@ -500,7 +500,7 @@
       "aspects": {
         "concept": "us-gaap:AccountsReceivableGross",
         "entity": "JUPITER",
-        "period": "2017-11-30T00:00:00/2017-11-30T00:00:00",
+        "period": "2017-11-30T00:00:00",
         "solar:AccountsReceivableAgingAxis": "solar:AccountsReceivableAgingBalancePastDueOver120DaysMember"
       }
     },
