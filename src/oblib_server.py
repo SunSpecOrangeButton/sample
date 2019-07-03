@@ -24,11 +24,12 @@ using the code that is written here.
 Before running this program a database needs to be setup with the following table placed in it:
 
     CREATE TABLE utility (
-        utility_id CHAR(36),
+        utility_id int NOT NULL AUTO_INCREMENT,
         name VARCHAR(80),
         contact_name_and_title VARCHAR(80),
         identifier CHAR(20),
-        email_address VARCHAR(40)
+        email_address VARCHAR(40),
+        PRIMARY KEY (utility_id)
     );
 
 And the configuration file (oblib-server.cfg) needs to be place in the startup directory.  Its contents should be:
@@ -46,9 +47,9 @@ Then use the following comand to start the REST server.
 
 Here are some working queries:
 
-    curl -X POST -H "Content-Type: application/json" -d @"oblib_server_test.json"  http://localhost:5000/utility/62511403-0fe9-4775-a9c3-7b1b59e497c0
-    curl -X GET http://localhost:5000/utility/62511403-0fe9-4775-a9c3-7b1b59e497c0
-    curl -X DELETE http://localhost:5000/utility/62511403-0fe9-4775-a9c3-7b1b59e497c0
+    curl -X POST -H "Content-Type: application/json" -d @"oblib_server_test.json"  http://localhost:5000/utility/
+    curl -X GET http://localhost:5000/utility/5493006MHB84EE0ZWV18
+    curl -X DELETE http://localhost:5000/utility/5493006MHB84EE0ZWV18
 """
 
 from oblib import taxonomy, data_model, parser
@@ -89,15 +90,26 @@ class Utility:
               "; identifier: " + str(self.identifier) + \
               "; email_address: " + str(self.email_address)
 
+    def _find_ctx(self, entrypoint):
+        """ Data_model does not find a context so this utility method is created until it is built into entrypoint """
+        facts = entrypoint.get_all_facts()
+        ctx = None
+        for f in facts:
+            if ctx:
+                if f.context != ctx:
+                    raise Exception("Mulitple contexts are not supported")
+            else:
+                ctx = f.context
+        return ctx
+
     def from_JSON_string(self, json):
         """ Load self from Orange Button JSON string"""
 
         entrypoint = ob_parser.from_JSON_string(json, "Utility")
-        print(self.utility_id)
-        ctx = data_model.Context(duration="forever", UtilityIdentifierAxis=self.utility_id)
+        ctx = self._find_ctx(entrypoint)
         self.name = get_fact_value(entrypoint.get("solar:UtilityName", ctx))
         self.contact_name_and_title = get_fact_value(entrypoint.get("solar:UtilityContactNameAndTitle", ctx))
-        self.identifier = get_fact_value(entrypoint.get("solar:UtilityIdentifier", ctx))
+        self.identifier = ctx.axes["solar:UtilityIdentifierAxis"]
         self.email_address = get_fact_value(entrypoint.get("solar:UtilityEmailAddress", ctx))
 
     def to_JSON_string(self):
@@ -106,10 +118,10 @@ class Utility:
         entrypoint = data_model.OBInstance("Utility", ob_taxonomy)
         kwargs = {}
         kwargs["duration"] = "forever"
-        kwargs["solar:UtilityIdentifierAxis"] = self.utility_id
+        kwargs["solar:UtilityIdentifierAxis"] = self.identifier
         entrypoint.set("solar:UtilityName", self.name, **kwargs)
         entrypoint.set("solar:UtilityContactNameAndTitle", self.contact_name_and_title, **kwargs)
-        #entrypoint.set("solar:UtilityIdentifier", rec.identifier, **kwargs)
+        entrypoint.set("solar:UtilityIdentifier", self.identifier, **kwargs)
         entrypoint.set("solar:UtilityEmailAddress", self.email_address, **kwargs)
         json = ob_parser.to_JSON_string(entrypoint)
         return json
@@ -136,18 +148,18 @@ class OrangeDb:
         cursor = OrangeDb.__connection.cursor()
         cursor.execute("""
             INSERT INTO utility (
-                utility_id, name, contact_name_and_title, identifier, email_address)
+                name, contact_name_and_title, identifier, email_address)
             VALUES(
-                %s, %s, %s, %s, %s)
-            """, (rec.utility_id, rec.name, rec.contact_name_and_title, rec.identifier, rec.email_address))
+                %s, %s, %s, %s)
+            """, (rec.name, rec.contact_name_and_title, rec.identifier, rec.email_address))
         cursor.execute("commit")
         cursor.close()
 
     def read_utility(self, rec):
         """Read utility record"""
         cursor = OrangeDb.__connection.cursor()
-        results = cursor.execute("SELECT * FROM utility WHERE utility_id=%s",
-            (rec.utility_id,))
+        results = cursor.execute("SELECT * FROM utility WHERE identifier=%s",
+            (rec.identifier,))
         for row in cursor:
             rec.utility_id = row[0]
             rec.name = row[1]
@@ -162,8 +174,8 @@ class OrangeDb:
     def delete_utility(self, rec):
         """Delete utility record"""
         cursor = OrangeDb.__connection.cursor()
-        cursor.execute("DELETE FROM utility WHERE utility_id=%s",
-            (rec.utility_id,))
+        cursor.execute("DELETE FROM utility WHERE identifier=%s",
+            (rec.identifier,))
         cursor.execute("commit")
         cursor.close()
 
@@ -193,13 +205,13 @@ app = Flask(__name__)
 """End of Main Code"""
 
 
-@app.route('/utility/<utility_id>', methods=['DELETE'])
-def delete_handler(utility_id):
+@app.route('/utility/<identifier>', methods=['DELETE'])
+def delete_handler(identifier):
     """Flask Delete Handler for utility"""
 
     try:
         rec = Utility()
-        rec.utility_id = utility_id
+        rec.identifier = identifier
         orange_db.delete_utility(rec)
         return '{"type": "Success"}'
     except Exception as e:
@@ -207,13 +219,13 @@ def delete_handler(utility_id):
         return '{"type": "Error", "message": "Input is not correct."}'
 
 
-@app.route('/utility/<utility_id>', methods=['GET'])
-def read_handler(utility_id):
+@app.route('/utility/<identifier>', methods=['GET'])
+def read_handler(identifier):
     """Flask Read Handler for utility"""
 
     try:
         rec = Utility()
-        rec.utility_id = utility_id
+        rec.identifier = identifier
         orange_db.read_utility(rec)
         json = rec.to_JSON_string()
         return '{"type": "Success", "message": ' + json + '}'
@@ -222,16 +234,15 @@ def read_handler(utility_id):
         return '{"type": "Error", "message": "Input is not correct."}'
 
 
-@app.route('/utility/<utility_id>', methods=['POST'])
-def write_hander(utility_id):
+@app.route('/utility/', methods=['POST'])
+def write_hander():
     """Flask Write Handler for utility"""
 
     try:
         rec = Utility()
-        rec.utility_id = utility_id
         rec.from_JSON_string(request.data)
         orange_db.insert_utility(rec)
         return '{"type": "Success"}'
     except Exception as e:
          print(e)
-         return '{"type": "Error", "message": "Input is not correctly formatted JSON"}'
+         return '{"type": "Error", "message": "Input is not correctly formatted Orange Button JSON"}'

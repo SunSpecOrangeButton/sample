@@ -10,11 +10,11 @@ Responsibilities
 * Respect all community members at all times.
 
 # Getting started
-You must sign the Orange Button Indiviudal or Corporate Contributors agreement before enhancing or changing the documentation.
+You must sign the Orange Button Individual or Corporate Contributors agreement before enhancing or changing the documentation.
 
 There is no formal process for working on the sample data itself.  Sample Data can be added without pull requests or pull requests may be used if preferred.
 
-Please send an email to support@sunspec.org so we are aware of your intent to contribute.  Optionally its ok ask for a review of changes in advance although this is not strictly required.
+Please send an email to support@sunspec.org so we are aware of your intent to contribute.  Optionally it is ok ask for a review of changes in advance although this is not strictly required.
 
 # How to report inaccurate or incomplete sample data
-Please  file a GITHub issue.
+Please  file a GitHub issue.
