@@ -18,12 +18,53 @@ This program searches for special characters in the Taxonomy.
 from oblib import taxonomy
 import re
 
-regex1 = re.compile('[^abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ]')
+regex1 = re.compile('[^abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_ ]')
 regex2 = re.compile('^[1234567890]')
 
 tax = taxonomy.Taxonomy()
+
+print("Types:")
+print()
 
 for type_ in tax.types.get_all_types():
     for e in tax.types.get_type_enum(type_):
         if regex1.search(e) != None or regex2.search(e) != None:
             print(type_, e)
+
+print()
+print("Units:")
+print()
+
+for unit in tax.units.get_all_units():
+    if regex1.search(unit) != None or regex2.search(unit) != None:
+        print(unit)
+
+print()
+print("Numeric Types:")
+print()
+
+for num_type in tax.numeric_types.get_all_numeric_types():
+    num_type = num_type.replace("num-us:", "")
+    if regex1.search(num_type) != None or regex2.search(num_type) != None:
+        print(num_type)
+
+print()
+print("Ref Parts:")
+print()
+
+for ref_part in tax.ref_parts.get_all_ref_parts():
+    if regex1.search(ref_part) != None or regex2.search(ref_part) != None:
+        print(ref_part)
+
+print()
+print("Concepts:")
+print()
+
+cl = set()
+for entrypoint in tax.semantic.get_all_entrypoints():
+    for concept in tax.semantic.get_all_concepts(entrypoint):
+        concept = concept.split(":")[1]
+        if regex1.search(concept) != None or regex2.search(concept) != None:
+            cl.add(concept)
+for c in cl:
+    print(c)
