@@ -19,12 +19,26 @@ used as Backup at this point and this is in no way ready for general usage.
 """
 
 from oblib import taxonomy
+import simple_ob
 
 import sys
 
 
 def header(out):
     out.write("<html>\n")
+    out.write("""
+    <header>
+        <style>
+              .outer {
+                  margin: 0 auto;
+                }
+                
+                .inner {
+                  margin-left: 50px;
+                }
+            </style>
+        </header>
+    """);
     out.write("  <body>\n")
 
 
@@ -34,8 +48,14 @@ def abstract(out, abstract, level):
     elif level == 2:
         out.write("    <h2>" + abstract + "</h2>\n")
 
+def start_list(out):
+    out.write("          <ul>\n")
+
 def list(out, item):
     out.write("          <li>" + item + "</li>\n")
+
+def end_list(out):
+    out.write("          </ul>\n")
 
 def start_table(out, table, level):
     if level == 1:
@@ -45,16 +65,23 @@ def start_table(out, table, level):
     out.write("      <table border='1'>\n");
 
 
-def end_table(out, data):
+def end_table(out, data, legal_values):
     out.write("        <tr>\n")
     for d in data:
         out.write("          <th>" + d + "</th>\n")
     out.write("        </tr>\n")
-    out.write("        <tr>\n")
-    for d in data:
-        out.write("          <th>&nbsp;</th>\n")
-    out.write("        </tr>\n")
-
+    if legal_values == None:
+        out.write("        <tr>\n")
+        for d in data:
+            out.write("          <td>&nbsp;</td>\n")
+        out.write("        <tr>\n")
+    else:
+        for l in legal_values[0]:
+            out.write("        <tr>\n")
+            out.write("          <td>" + l + "</td>\n")
+            for d in data[1:]:
+                out.write("          <td>&nbsp;</td>\n")
+            out.write("        <tr>\n")
     out.write("      </table>\n")
 
 
@@ -65,48 +92,29 @@ def footer(out):
 
 def process(entrypoint, out_dn):
 
-    relationships = tax.semantic.get_entrypoint_relationships(entrypoint)
-    if relationships is None:
-        print("Entry Point command line argument does not exist in Taxonomy.")
-        sys.exit()
+    abstracts = simple_ob.create_abstracts(entrypoint)
 
+    level = 1
     with open(out_dn + "/" + entrypoint + ".html", "w") as out:
         header(out)
-
-        first = True
-        in_table = False
-        level = 1
-        data = []
-        for r in relationships:
-            f = r.from_.split(":")[1]
-            t = r.to.split(":")[1]
-            if first:
-                abstract(out, f.replace("Axis", ""), level)
-                first = False
-                level += 1
-                continue
-
-            if in_table:
-                if r.role.value == "hypercube-dimension":
-                    data.append(t.replace("Axis", "") + " (PK)")
-                elif r.role.value == "domain-member":
-                    data.append(t)
-                elif r.role.value == "all":
-                    end_table(out, data)
-                    data = []
+        for key in abstracts:
+            abstract(out, key, level)
+            a = abstracts[key]
+            if not a.is_table:
+                start_list(out)
+                for member in a.members:
+                    list(out, member)
+                end_list(out)
             else:
-                if r.role.value == "domain-member" and t.endswith("Abstract"):
-                    abstract(out, t, level)
-                elif r.role.value == "domain-member" and not t.endswith("Abstract"):
-                    list(out, t)
-
-            if t.endswith("Table"):
-                start_table(out, t, level)
-                in_table = True
+                start_table(out, "", level)
                 data = []
-
-        if in_table:
-            end_table(out, data)
+                for pk in a.pks:
+                    data.append(pk + " (PK)")
+                for member in a.members:
+                    data.append(member)
+                end_table(out, data, a.pk_legal_values)
+            if level == 1:
+                level = 2
 
         footer(out)
 
