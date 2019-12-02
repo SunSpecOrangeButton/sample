@@ -44,9 +44,9 @@ def header(out):
 
 def abstract(out, abstract, level):
     if level == 1:
-        out.write("    <h1>" + abstract + "</h1>\n")
+        out.write("    <h1>" + abstract + " (A)</h1>\n")
     elif level == 2:
-        out.write("    <h2>" + abstract + "</h2>\n")
+        out.write("    <h2>" + abstract + " (A)</h2>\n")
 
 def start_list(out):
     out.write("          <ul>\n")
@@ -58,10 +58,10 @@ def end_list(out):
     out.write("          </ul>\n")
 
 def start_table(out, table, level):
-    if level == 1:
-        out.write("    <h1>" + table + "</h1>\n")
-    elif level == 2:
-        out.write("    <h2>" + table + "</h2>\n")
+    # if level == 1:
+    #     out.write("    <h1>" + table + " (T)</h1>\n")
+    # elif level == 2:
+    out.write("    <h2>" + table + " (T)</h2>\n")
     out.write("      <table border='1'>\n");
 
 
@@ -76,10 +76,19 @@ def end_table(out, data, legal_values):
             out.write("          <td>&nbsp;</td>\n")
         out.write("        <tr>\n")
     else:
-        for l in legal_values[0]:
+        max_count = 0
+        for lv in legal_values:
+            if len(lv) > max_count:
+                max_count = len(lv)
+
+        for i in range(0, max_count):
             out.write("        <tr>\n")
-            out.write("          <td>" + l + "</td>\n")
-            for d in data[1:]:
+            for lv in legal_values:
+                if len(lv) > i:
+                    out.write("          <td>" + lv[i] + "</td>\n")
+                else:
+                    out.write("          <td>&nbsp;</td>\n")
+            for ii in range(len(legal_values), len(data)):
                 out.write("          <td>&nbsp;</td>\n")
             out.write("        <tr>\n")
     out.write("      </table>\n")
@@ -107,7 +116,7 @@ def process(entrypoint, out_dn):
 
             if a.tables:
                 for t in a.tables:
-                    start_table(out, "", level)
+                    start_table(out, t.name, level)
                     data = []
                     for pk in t.pks:
                         data.append(pk + " (PK)")
@@ -124,11 +133,17 @@ tax = taxonomy.Taxonomy()
 
 if len(sys.argv) != 3:
     print("Incorrect number of arguments - 2 required")
-    print("  Entrypoint")
+    print("  Entrypoint (ALL creates all entrypoints")
     print("  Path to Output directory (example: ./somepath/outdir)")
     sys.exit(1)
 
 entrypoint = sys.argv[1]
 out_dn = sys.argv[2]
 
-process(entrypoint, out_dn)
+if entrypoint.lower() == "all":
+    for entrypoint in tax.semantic.get_all_entrypoints():
+        if entrypoint.lower() != "all":
+            print("Creating", entrypoint)
+            process(entrypoint, out_dn)
+else:
+    process(entrypoint, out_dn)

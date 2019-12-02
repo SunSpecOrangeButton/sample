@@ -47,13 +47,15 @@ def create_abstracts(entrypoint):
     abstracts = {}
     last_abstract = None
     last_table = None
+    pk_count = -1
     for r in relationships:
         f = r.from_.split(":")[1]
         t = r.to.split(":")[1]
         if r.role.value == "domain-member" and f.endswith("Abstract"):
             name = f.replace("Abstract", "")
             if name in abstracts:
-                abstracts[name].members.append(t)
+                if not t.endswith("LineItems"):
+                    abstracts[name].members.append(t)
                 last_abstract = abstracts[name]
             else:
                 if t.endswith("LineItems"):
@@ -62,20 +64,26 @@ def create_abstracts(entrypoint):
                     abstracts[name] = Abstract(name, [t], None, None)
                 last_abstract = abstracts[name]
         elif r.role.value == "domain-member" and f.endswith("LineItems"):
-            last_table.members.append(t)
+            last_table.members.append(t.replace("Abstract", "(A)"))
         elif r.role.value == "domain-member" and f.endswith("Domain"):
             if last_table.pk_values_enum == None:
                 last_table.pk_values_enum = [[]]
-            last_table.pk_values_enum[0].append(t.replace("Member", ""))
+                for i in range(1, pk_count+1):
+                    last_table.pk_values_enum.append([])
+            last_table.pk_values_enum[pk_count].append(t.replace("Member", ""))
         elif r.role.value == "all":
             if last_abstract.tables == None:
                 last_abstract.tables = []
-            last_table = Table(t, [], None, [], None)
+            last_table = Table(t.replace("Table", ""), [], None, [], None)
             last_abstract.tables.append(last_table)
+            pk_count = -1
         elif r.role.value == "dimension-domain":
             pass
         elif r.role.value == "hypercube-dimension":
             last_table.pks.append(t.replace("Axis", ""))
+            pk_count += 1
+            if last_table.pk_values_enum:
+                last_table.pk_values_enum.append([])
 
     return abstracts
 
