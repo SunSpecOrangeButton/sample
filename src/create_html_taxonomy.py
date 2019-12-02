@@ -100,19 +100,20 @@ def process(entrypoint, out_dn):
         for key in abstracts:
             abstract(out, key, level)
             a = abstracts[key]
-            if not a.is_table:
-                start_list(out)
-                for member in a.members:
-                    list(out, member)
-                end_list(out)
-            else:
-                start_table(out, "", level)
-                data = []
-                for pk in a.pks:
-                    data.append(pk + " (PK)")
-                for member in a.members:
-                    data.append(member)
-                end_table(out, data, a.pk_legal_values)
+            start_list(out)
+            for member in a.members:
+                list(out, member)
+            end_list(out)
+
+            if a.tables:
+                for t in a.tables:
+                    start_table(out, "", level)
+                    data = []
+                    for pk in t.pks:
+                        data.append(pk + " (PK)")
+                    for member in t.members:
+                        data.append(member)
+                    end_table(out, data, t.pk_values_enum)
             if level == 1:
                 level = 2
 

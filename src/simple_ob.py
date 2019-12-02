@@ -3,14 +3,37 @@ from dataclasses import dataclass
 from typing import List
 import sys
 
+
 @dataclass
-class Abstract:
+class Child(object):
+    pass
+
+
+@dataclass
+class Table(object):
+
+    name: str
+    pks: List[str]
+    pk_values_enum: List[List[str]]
+    members: List[str]
+    children: List[Child]
+
+
+@dataclass
+class Abstract(Child):
 
     name: str
     members: List[str]
-    is_table: bool
-    pks: List[str]
-    pk_legal_values: List[List[str]]
+    tables: List[Table]
+    children: List[Child]
+
+
+@dataclass
+class OB(object):
+
+    abstracts: List[Abstract]
+    tables: List[Table]
+
 
 tax = taxonomy.Taxonomy()
 
@@ -23,6 +46,7 @@ def create_abstracts(entrypoint):
 
     abstracts = {}
     last_abstract = None
+    last_table = None
     for r in relationships:
         f = r.from_.split(":")[1]
         t = r.to.split(":")[1]
@@ -33,24 +57,25 @@ def create_abstracts(entrypoint):
                 last_abstract = abstracts[name]
             else:
                 if t.endswith("LineItems"):
-                    abstracts[name] = Abstract(name, [], False, None, None)
+                    abstracts[name] = Abstract(name, [], None, None)
                 else:
-                    abstracts[name] = Abstract(name, [t], False, None, None)
+                    abstracts[name] = Abstract(name, [t], None, None)
                 last_abstract = abstracts[name]
         elif r.role.value == "domain-member" and f.endswith("LineItems"):
-            last_abstract.members.append(t)
+            last_table.members.append(t)
         elif r.role.value == "domain-member" and f.endswith("Domain"):
-            if last_abstract.pk_legal_values == None:
-                last_abstract.pk_legal_values = [[]]
-            last_abstract.pk_legal_values[0].append(t.replace("Member", ""))
+            if last_table.pk_values_enum == None:
+                last_table.pk_values_enum = [[]]
+            last_table.pk_values_enum[0].append(t.replace("Member", ""))
         elif r.role.value == "all":
-            last_abstract.is_table = True
+            if last_abstract.tables == None:
+                last_abstract.tables = []
+            last_table = Table(t, [], None, [], None)
+            last_abstract.tables.append(last_table)
         elif r.role.value == "dimension-domain":
             pass
         elif r.role.value == "hypercube-dimension":
-            if last_abstract.pks == None:
-                last_abstract.pks = []
-            last_abstract.pks.append(t.replace("Axis", ""))
+            last_table.pks.append(t.replace("Axis", ""))
 
     return abstracts
 
