@@ -111,7 +111,7 @@ TYPES = {
     "solar-types:uuidXbrlItemType": "String",
     "solar-types:zoningPermitPropertyItemType": "Enumeration",
     "us-types:perUnitItemType": "String",
-    "xbrli:anyURIItemType": "String",
+    "xbrli:anyURIItemType": "URI",
     "xbrli:booleanItemType": "Boolean",
     "xbrli:dateItemType": "Date",
     "xbrli:decimalItemType": "Float",
@@ -151,27 +151,59 @@ with open(sys.argv[1] + "/" + "concepts.html", "w") as out:
             elif details.id.startswith("dei:"):
                 t = "DEI"
             out.write("        <li>Taxonomy: " + t + "</li>")
+
+            out.write("        <li>Entrypoints present in: ")
+            for entrypoint in tax.semantic.get_all_entrypoints():
+                if entrypoint != "All":
+                    out.write("        <ul>")
+                    if concept in tax.semantic.get_entrypoint_concepts(entrypoint):
+                        out.write("          <li>" + entrypoint + "</li>")
+                    out.write("        </ul>")
+
+            docs = tax.documentation.get_concept_documentation(concept)
+            if docs is None:
+                docs = "None"
+            out.write("        <li>Description:</li>")
+            out.write("        <ul>")
+            out.write("          <li>" + docs + "</li>")
+            out.write("        </ul>")
+            out.write("        <br>")
+
             out.write("        <li>Item Type: " + details.type_name.split(":")[1].replace("ItemType", "") + "</li>")
-            out.write("        <li>Data Type: " + TYPES[details.type_name].lower() + "</li>")
+
+            validation_rule = "None"
+            t = TYPES[details.type_name]
+            if t == "String":
+                validation_rule = "Any String is valid"
+            elif t == "Boolean":
+                validation_rule = "Boolean values (TRUE or FALSE) are valid"
+            elif t == "Integer":
+                validation_rule = "Integer values (no decimal point) are valid"
+            elif t == "Float":
+                validation_rule = "Float values (with or without decimal point) are valid"
+            elif t == "Enumeration":
+                validation_rule = "Value must be one of the enumerated values listed below:"
+            elif t == "URI":
+                validation_rule = "Value must be a valid internet URI/URL format (but does not necessarily need to exist on the internet)"
+            elif t == "UUID":
+                validation_rule = "Value must be a valid UUID (xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx)"
+            elif t == "LEI":
+                validation_rule = "Value must be a 20 character LEI string"
+            out.write("        <li>Validation Rule: " + validation_rule + "</li>")
+
+            if t == "Enumeration":
+                out.write("        <ul>")
+                for e in tax.types.get_type_enum(details.type_name):
+                    out.write("          <li>" + e + "</li>")
+                out.write("        </ul>")
 
             period = details.period_type.value
             if period == "instant":
                 period = "Instant in time"
             else:
                 period = "Period of time"
-            out.write("        <li>Period: " + details.period_type.value + "</li>")
+            out.write("        <li>Period: " + period + "</li>")
             out.write("        <li>Nillable: " + str(details.nillable) + "</li>")
-
-            docs = tax.documentation.get_concept_documentation(concept)
-            if docs is None:
-                docs = ""
-            out.write("        <li>Description: " + docs + "</li>")
-
-            out.write("        <li>Entrypoints present in: ")
-            for entrypoint in tax.semantic.get_all_entrypoints():
-                if entrypoint != "All":
-                    if concept in tax.semantic.get_entrypoint_concepts(entrypoint):
-                        out.write(entrypoint + " ")
 
             if concept == "us-gaap:Revenues":
                 calc = "Other Income + RebateRevenue + PeformanceBasedIncentiveRevenue + Electrical Generation Revenue = Revenues"
