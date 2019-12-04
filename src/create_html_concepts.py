@@ -152,7 +152,7 @@ with open(sys.argv[1] + "/" + "concepts.html", "w") as out:
                 t = "DEI"
             out.write("        <li>Taxonomy: " + t + "</li>")
 
-            out.write("        <li>Entrypoints present in: ")
+            out.write("        <li>Entrypoints: ")
             for entrypoint in tax.semantic.get_all_entrypoints():
                 if entrypoint != "All":
                     out.write("        <ul>")
@@ -196,6 +196,27 @@ with open(sys.argv[1] + "/" + "concepts.html", "w") as out:
                 for e in tax.types.get_type_enum(details.type_name):
                     out.write("          <li>" + e + "</li>")
                 out.write("        </ul>")
+
+            if details.type_name.startswith("num:") or details.type_name.startswith("num-us:"):
+                out.write("        <li>Precision/Decimals: Either Precision or Decimals must be specified</li>")
+            else:
+                out.write("        <li>Precision/Decimals: N/A (neither precision nor decimals may be specified)</li>")
+
+            if details.type_name.startswith("num:") or details.type_name.startswith("num-us:"):
+                out.write("        <li>Units:</li>")
+                out.write("        <ul>")
+
+                if details.type_name in ["num:percentItemType"]:
+                    out.write("           <li>pure</li>")
+                else:
+                    for unit in tax.units.get_all_units():
+                        ud = tax.units.get_unit(unit)
+                        if details.type_name.lower().find(ud.item_type.lower()) != -1:
+                            out.write("           <li>" + ud.unit_name + " </li>")
+
+                out.write("        </ul>")
+            else:
+                out.write("        <li>Units: N/A (units may not be specified)</li>")
 
             period = details.period_type.value
             if period == "instant":
