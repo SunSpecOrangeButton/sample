@@ -24,109 +24,175 @@ import simple_ob
 import sys
 
 
-def header(out):
-    out.write("<html>\n")
-    out.write("""
-    <header>
-        <style>
-              .outer {
-                  margin: 0 auto;
-                }
-                
-                .inner {
-                  margin-left: 50px;
-                }
-            </style>
-        </header>
-    """);
-    out.write("  <body>\n")
+class Base():
+
+    def header(out):
+        out.write("<html>\n")
+        out.write("""
+        <header>
+            <style>
+                  .outer {
+                      margin: 0 auto;
+                    }
+
+                    .inner {
+                      margin-left: 50px;
+                    }
+                </style>
+            </header>
+        """);
+        out.write("  <body>\n")
+
+    def footer(out):
+        out.write("  </body>\n")
+        out.write("</html>\n")
+
+    def abstract(out, abstract, level):
+        if level == 1:
+            out.write("    <h1>" + abstract + " (Abstract)</h1>\n")
+        elif level == 2:
+            out.write("    <h2>" + abstract + " (Abstract)</h2>\n")
+
+    def start_list(out):
+        out.write("          <ul>\n")
+
+    def list(out, item):
+        out.write("          <li>" + item + "</li>\n")
+
+    def end_list(out):
+        out.write("          </ul>\n")
 
 
-def abstract(out, abstract, level):
-    if level == 1:
-        out.write("    <h1>" + abstract + " (A)</h1>\n")
-    elif level == 2:
-        out.write("    <h2>" + abstract + " (A)</h2>\n")
+class TableHRepresentation(Base):
 
-def start_list(out):
-    out.write("          <ul>\n")
+    def start_table(out, table, level):
+        # if level == 1:
+        #     out.write("    <h1>" + table + " (T)</h1>\n")
+        # elif level == 2:
+        out.write("    <h2>" + table + " (T)</h2>\n")
+        out.write("      <table border='1'>\n")
 
-def list(out, item):
-    out.write("          <li>" + item + "</li>\n")
-
-def end_list(out):
-    out.write("          </ul>\n")
-
-def start_table(out, table, level):
-    # if level == 1:
-    #     out.write("    <h1>" + table + " (T)</h1>\n")
-    # elif level == 2:
-    out.write("    <h2>" + table + " (T)</h2>\n")
-    out.write("      <table border='1'>\n");
-
-
-def end_table(out, data, legal_values):
-    out.write("        <tr>\n")
-    for d in data:
-        out.write("          <th>" + d + "</th>\n")
-    out.write("        </tr>\n")
-    if legal_values == None:
+    def end_table(out, data, legal_values):
         out.write("        <tr>\n")
         for d in data:
-            out.write("          <td>&nbsp;</td>\n")
-        out.write("        <tr>\n")
-    else:
-        max_count = 0
-        for lv in legal_values:
-            if len(lv) > max_count:
-                max_count = len(lv)
-
-        for i in range(0, max_count):
+            out.write("          <th>" + d + "</th>\n")
+        out.write("        </tr>\n")
+        if legal_values == None:
             out.write("        <tr>\n")
-            for lv in legal_values:
-                if len(lv) > i:
-                    out.write("          <td>" + lv[i] + "</td>\n")
-                else:
-                    out.write("          <td>&nbsp;</td>\n")
-            for ii in range(len(legal_values), len(data)):
+            for d in data:
                 out.write("          <td>&nbsp;</td>\n")
             out.write("        <tr>\n")
-    out.write("      </table>\n")
+        else:
+            max_count = 0
+            for lv in legal_values:
+                if len(lv) > max_count:
+                    max_count = len(lv)
+
+            for i in range(0, max_count):
+                out.write("        <tr>\n")
+                for lv in legal_values:
+                    if len(lv) > i:
+                        out.write("          <td>" + lv[i] + "</td>\n")
+                    else:
+                        out.write("          <td>&nbsp;</td>\n")
+                for ii in range(len(legal_values), len(data)):
+                    out.write("          <td>&nbsp;</td>\n")
+                out.write("        <tr>\n")
+        out.write("      </table>\n")
 
 
-def footer(out):
-    out.write("  </body>\n")
-    out.write("</html>\n")
+    def process(entrypoint, out_dn):
+
+        abstracts = simple_ob.create_abstracts(entrypoint)
+
+        level = 1
+        with open(out_dn + "/" + entrypoint + "-table.html", "w") as out:
+            TableHRepresentation.header(out)
+            for key in abstracts:
+                TableHRepresentation.abstract(out, key, level)
+                a = abstracts[key]
+                TableHRepresentation.start_list(out)
+                for member in a.members:
+                    TableHRepresentation.list(out, member)
+                TableHRepresentation.end_list(out)
+
+                if a.tables:
+                    for t in a.tables:
+                        TableHRepresentation.start_table(out, t.name, level)
+                        data = []
+                        for pk in t.pks:
+                            data.append(pk + " (PK)")
+                        for member in t.members:
+                            data.append(member)
+                        TableHRepresentation.end_table(out, data, t.pk_values_enum)
+                if level == 1:
+                    level = 2
+
+            TableHRepresentation.footer(out)
 
 
-def process(entrypoint, out_dn):
+class TreeVRepresentation(Base):
 
-    abstracts = simple_ob.create_abstracts(entrypoint)
+    def start_table(out, table, level):
+        out.write("    <h2>" + table + " (Table)</h2>\n")
+        out.write("      <table border='1'>\n")
 
-    level = 1
-    with open(out_dn + "/" + entrypoint + ".html", "w") as out:
-        header(out)
-        for key in abstracts:
-            abstract(out, key, level)
-            a = abstracts[key]
-            start_list(out)
-            for member in a.members:
-                list(out, member)
-            end_list(out)
+    def end_table(out, data, legal_values):
+        out.write("        <tr>\n")
+        out.write("          <th>Concept</th><th>Purpose</th>\n")
+        out.write("        <tr>\n")
 
-            if a.tables:
-                for t in a.tables:
-                    start_table(out, t.name, level)
-                    data = []
-                    for pk in t.pks:
-                        data.append(pk + " (PK)")
-                    for member in t.members:
-                        data.append(member)
-                    end_table(out, data, t.pk_values_enum)
-            if level == 1:
-                level = 2
+        col = 0
+        for d in data:
+            c = d
+            p = "Data Element"
+            if d.find("(PK)") != -1:
+                c = d.replace("(PK)", "")
+                p = "PK"
+                if legal_values != None and len(legal_values[col]) > 0:
+                    p = "PK - Set to one of:<br/>"
+                    for l in legal_values[col]:
+                        p += "&nbsp;&nbsp;" + l + "<br/>"
+            elif d.find("(A)") != -1:
+                c = d.replace("(A)", "")
+                p = "Abstract"
 
-        footer(out)
+            out.write("        <tr>\n")
+            out.write("          <td>" + c + "</td><td>" + p + "</td>\n")
+            out.write("        <tr>\n")
+            col += 1
+
+        out.write("      </table>\n")
+
+
+    def process(entrypoint, out_dn):
+
+        abstracts = simple_ob.create_abstracts(entrypoint)
+
+        level = 1
+        with open(out_dn + "/" + entrypoint + "-v.html", "w") as out:
+            TreeVRepresentation.header(out)
+            for key in abstracts:
+                TreeVRepresentation.abstract(out, key, level)
+                a = abstracts[key]
+                TreeVRepresentation.start_list(out)
+                for member in a.members:
+                    TreeVRepresentation.list(out, member)
+                TreeVRepresentation.end_list(out)
+
+                if a.tables:
+                    for t in a.tables:
+                        TreeVRepresentation.start_table(out, t.name, level)
+                        data = []
+                        for pk in t.pks:
+                            data.append(pk + " (PK)")
+                        for member in t.members:
+                            data.append(member)
+                        TreeVRepresentation.end_table(out, data, t.pk_values_enum)
+                if level == 1:
+                    level = 2
+
+            TreeVRepresentation.footer(out)
 
 
 tax = taxonomy.Taxonomy()
@@ -144,6 +210,8 @@ if entrypoint.lower() == "all":
     for entrypoint in tax.semantic.get_all_entrypoints():
         if entrypoint.lower() != "all":
             print("Creating", entrypoint)
-            process(entrypoint, out_dn)
+            TableHRepresentation.process(entrypoint, out_dn)
+            TreeVRepresentation.process(entrypoint, out_dn)
 else:
-    process(entrypoint, out_dn)
+    TableHRepresentation.process(entrypoint, out_dn)
+    TreeVRepresentation.process(entrypoint, out_dn)
