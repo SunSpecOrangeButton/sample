@@ -48,10 +48,7 @@ class Base():
         out.write("</html>\n")
 
     def abstract(out, abstract, level):
-        if level == 1:
-            out.write("    <h1>" + abstract + " (Abstract)</h1>\n")
-        elif level == 2:
-            out.write("    <h2>" + abstract + " (Abstract)</h2>\n")
+        out.write("    <h" + str(level) + ">" + abstract + " (Abstract)</h" + str(level) + ">\n")
 
     def start_list(out):
         out.write("          <ul>\n")
@@ -105,30 +102,35 @@ class TableHRepresentation(Base):
 
         abstracts = simple_ob.create_abstracts(entrypoint)
 
-        level = 1
-        with open(out_dn + "/" + entrypoint + "-table.html", "w") as out:
+        with open(out_dn + "/" + entrypoint + "-h.html", "w") as out:
             TableHRepresentation.header(out)
             for key in abstracts:
-                TableHRepresentation.abstract(out, key, level)
-                a = abstracts[key]
-                TableHRepresentation.start_list(out)
-                for member in a.members:
-                    TableHRepresentation.list(out, member)
-                TableHRepresentation.end_list(out)
-
-                if a.tables:
-                    for t in a.tables:
-                        TableHRepresentation.start_table(out, t.name, level)
-                        data = []
-                        for pk in t.pks:
-                            data.append(pk + " (PK)")
-                        for member in t.members:
-                            data.append(member)
-                        TableHRepresentation.end_table(out, data, t.pk_values_enum)
-                if level == 1:
-                    level = 2
-
+                TableHRepresentation.subprocess(abstracts[key], 1, out)
+                break
             TableHRepresentation.footer(out)
+
+    def subprocess(a, level, out):
+        TableHRepresentation.abstract(out, a.name, level)
+        TableHRepresentation.start_list(out)
+        for member in a.members:
+            TableHRepresentation.list(out, member)
+        if a.tables:
+            for t in a.tables:
+                TableHRepresentation.start_table(out, t.name, level)
+                data = []
+                for pk in t.pks:
+                    data.append(pk + " (PK)")
+                for member in t.members:
+                    data.append(member)
+                TableHRepresentation.end_table(out, data, t.pk_values_enum)
+                if t.children:
+                    for c in t.children:
+                        TableHRepresentation.subprocess(c, level+1, out)
+        if a.children:
+            for c in a.children:
+                if c is not None:
+                    TableHRepresentation.subprocess(c, level+1, out)
+        TableHRepresentation.end_list(out)
 
 
 class TreeVRepresentation(Base):
@@ -169,30 +171,35 @@ class TreeVRepresentation(Base):
 
         abstracts = simple_ob.create_abstracts(entrypoint)
 
-        level = 1
         with open(out_dn + "/" + entrypoint + "-v.html", "w") as out:
             TreeVRepresentation.header(out)
             for key in abstracts:
-                TreeVRepresentation.abstract(out, key, level)
-                a = abstracts[key]
-                TreeVRepresentation.start_list(out)
-                for member in a.members:
-                    TreeVRepresentation.list(out, member)
-                TreeVRepresentation.end_list(out)
-
-                if a.tables:
-                    for t in a.tables:
-                        TreeVRepresentation.start_table(out, t.name, level)
-                        data = []
-                        for pk in t.pks:
-                            data.append(pk + " (PK)")
-                        for member in t.members:
-                            data.append(member)
-                        TreeVRepresentation.end_table(out, data, t.pk_values_enum)
-                if level == 1:
-                    level = 2
-
+                TreeVRepresentation.subprocess(abstracts[key], 1, out)
+                break
             TreeVRepresentation.footer(out)
+
+    def subprocess(a, level, out):
+        TreeVRepresentation.abstract(out, a.name, level)
+        TreeVRepresentation.start_list(out)
+        for member in a.members:
+            TreeVRepresentation.list(out, member)
+        if a.tables:
+            for t in a.tables:
+                TreeVRepresentation.start_table(out, t.name, level)
+                data = []
+                for pk in t.pks:
+                    data.append(pk + " (PK)")
+                for member in t.members:
+                    data.append(member)
+                TreeVRepresentation.end_table(out, data, t.pk_values_enum)
+                if t.children:
+                    for c in t.children:
+                        TreeVRepresentation.subprocess(c, level+1, out)
+        if a.children:
+            for c in a.children:
+                if c is not None:
+                    TreeVRepresentation.subprocess(c, level+1, out)
+        TreeVRepresentation.end_list(out)
 
 
 tax = taxonomy.Taxonomy()

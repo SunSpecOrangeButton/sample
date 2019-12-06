@@ -37,6 +37,69 @@ class OB(object):
 
 tax = taxonomy.Taxonomy()
 
+def abstract_relationships(entrypoint, abstracts):
+
+    relationships = tax.semantic.get_entrypoint_relationships(entrypoint)
+    if relationships is None:
+        print("Entry Point command line argument does not exist in Taxonomy.")
+        return []
+
+    for r in relationships:
+        f = r.from_.split(":")[1]
+        t = r.to.split(":")[1]
+        if f.endswith("Abstract") and t.endswith("Abstract"):
+            parent = None
+            child = None
+            for item in abstracts.items():
+                if item[1].name == f.replace("Abstract", ""):
+                    parent = item[1]
+                if item[1].name == t.replace("Abstract", ""):
+                    child = item[1]
+            if parent.children:
+                parent.children.append(child)
+            else:
+                parent.children = [child]
+
+
+def table_relationships(entrypoint, abstracts):
+
+    relationships = tax.semantic.get_entrypoint_relationships(entrypoint)
+    if relationships is None:
+        print("Entry Point command line argument does not exist in Taxonomy.")
+        return []
+
+    for r in relationships:
+        f = r.from_.split(":")[1]
+        t = r.to.split(":")[1]
+        if f.endswith("LineItems") and t.endswith("Abstract"):
+            parent = None
+            child = None
+            for item in abstracts.items():
+                if item[1].tables:
+                    for table in item[1].tables:
+                        # TODO: Fix brittle code which assumes that LineItems and Table name is always identically prefixed
+                        # This is the cause of the warning: "Warning - parent/child relationship not found"
+                        if table.name == f.replace("LineItems", ""):
+                            parent = table
+                            break
+
+                        # for member in table.members:
+                        #     if member == f.replace("LineItems", ""):
+                        #         parent = table
+                        #         break
+            for item in abstracts.items():
+                if item[1].name == t.replace("Abstract", ""):
+                    child = item[1]
+
+            if not parent or not child:
+                print("  Warning - parent/child relationship not found", parent, child)
+            else:
+                if parent.children:
+                    parent.children.append(child)
+                else:
+                    parent.children = [child]
+
+
 def create_abstracts(entrypoint):
 
     relationships = tax.semantic.get_entrypoint_relationships(entrypoint)
@@ -85,7 +148,11 @@ def create_abstracts(entrypoint):
             if last_table.pk_values_enum:
                 last_table.pk_values_enum.append([])
 
+    abstract_relationships(entrypoint, abstracts)
+    table_relationships(entrypoint, abstracts)
+
     return abstracts
+
 
 if __name__ == "__main__":
 
@@ -96,5 +163,7 @@ if __name__ == "__main__":
 
     entrypoint = sys.argv[1]
     abstracts = create_abstracts(entrypoint)
-    for key in abstracts:
-        print(abstracts[key])
+    for item in abstracts.items():
+        print(item[1])
+    print()
+
