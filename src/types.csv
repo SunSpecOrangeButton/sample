@@ -78,6 +78,7 @@ solar-types:systemOperationalStatusItemType,"Communication Failure"
 solar-types:titlePolicyInsuranceItemType,"Pro Forma"
 solar-types:trackerItemType,"Azimuth Axis Tracking"
 solar-types:uuidXbrlItemType,2b1d17d7-70cd-4a51-951a-76aaa2d83754
+solar-types:uuidItemType,2b1d17d7-70cd-4a51-951a-76aaa2d83754
 solar-types:zoningPermitPropertyItemType,"Gen Tie Line"
 us-types:perUnitItemType,UNKNOWN
 xbrli:anyURIItemType,http://www.google.com

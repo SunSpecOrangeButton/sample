@@ -133,43 +133,43 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 with open(sys.argv[1] + "/" + "concepts.html", "w") as out:
-    out.write("<html>")
-    out.write("  <body>")
-    out.write("     <h1>Concepts</h1>")
+    out.write("<html>\n")
+    out.write("  <body>\n")
+    out.write("     <h1>Concepts</h1>\n")
 
     for concept in tax.semantic.get_all_concepts(details=True):
         details = tax.semantic.get_concept_details(concept)
         if not details.abstract:
-            out.write("      <h2>" + concept.replace("dei:", "").replace("us-gaap:", "").replace("solar:", "") + "</h2>")
-            out.write("      <ul>")
+            out.write("      <h2>" + concept.replace("dei:", "").replace("us-gaap:", "").replace("solar:", "") + "</h2>\n")
+            out.write("      <ul>\n")
 
-            out.write("        <li>Label: " + convert(details.name) + "</li>")
+            out.write("        <li>Label: " + convert(details.name) + "</li>\n")
 
             t = "SOLAR"
             if details.id.startswith("us-gaap:"):
                 t = "US-GAAP"
             elif details.id.startswith("dei:"):
                 t = "DEI"
-            out.write("        <li>Taxonomy: " + t + "</li>")
+            out.write("        <li>Taxonomy: " + t + "</li>\n")
 
-            out.write("        <li>Entrypoints: ")
+            out.write("        <li>Entrypoints: \n")
             for entrypoint in tax.semantic.get_all_entrypoints():
                 if entrypoint != "All":
-                    out.write("        <ul>")
                     if concept in tax.semantic.get_entrypoint_concepts(entrypoint):
-                        out.write("          <li>" + entrypoint + "</li>")
-                    out.write("        </ul>")
+                        out.write("        <ul>\n")
+                        out.write("          <li>" + entrypoint + "</li>\n")
+                        out.write("        </ul>\n")
 
             docs = tax.documentation.get_concept_documentation(concept)
             if docs is None:
                 docs = "None"
-            out.write("        <li>Description:</li>")
-            out.write("        <ul>")
-            out.write("          <li>" + docs + "</li>")
-            out.write("        </ul>")
-            out.write("        <br>")
+            out.write("        <li>Description:</li>\n")
+            out.write("        <ul>\n")
+            out.write("          <li>" + docs + "</li>\n")
+            out.write("        </ul>\n")
+            out.write("        <br>\n")
 
-            out.write("        <li>Item Type: " + details.type_name.split(":")[1].replace("ItemType", "") + "</li>")
+            out.write("        <li>Item Type: " + details.type_name.split(":")[1].replace("ItemType", "") + "</li>\n")
 
             validation_rule = "None"
             t = TYPES[details.type_name]
@@ -189,49 +189,49 @@ with open(sys.argv[1] + "/" + "concepts.html", "w") as out:
                 validation_rule = "Value must be a valid UUID (xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx)"
             elif t == "LEI":
                 validation_rule = "Value must be a 20 character LEI string"
-            out.write("        <li>Validation Rule: " + validation_rule + "</li>")
+            out.write("        <li>Validation Rule: " + validation_rule + "</li>\n")
 
             if t == "Enumeration":
-                out.write("        <ul>")
+                out.write("        <ul>\n")
                 for e in tax.types.get_type_enum(details.type_name):
-                    out.write("          <li>" + e + "</li>")
-                out.write("        </ul>")
+                    out.write("          <li>" + e + "</li>\n")
+                out.write("        </ul>\n")
 
             if details.type_name.startswith("num:") or details.type_name.startswith("num-us:"):
-                out.write("        <li>Precision/Decimals: Either Precision or Decimals must be specified</li>")
+                out.write("        <li>Precision/Decimals: Either Precision or Decimals must be specified</li>\n")
             else:
-                out.write("        <li>Precision/Decimals: N/A (neither precision nor decimals may be specified)</li>")
+                out.write("        <li>Precision/Decimals: N/A (neither precision nor decimals may be specified)</li>\n")
 
             if details.type_name.startswith("num:") or details.type_name.startswith("num-us:"):
-                out.write("        <li>Units:</li>")
-                out.write("        <ul>")
+                out.write("        <li>Units:</li>\n")
+                out.write("        <ul>\n")
 
                 if details.type_name in ["num:percentItemType"]:
-                    out.write("           <li>pure</li>")
+                    out.write("           <li>pure</li>\n")
                 else:
                     for unit in tax.units.get_all_units():
                         ud = tax.units.get_unit(unit)
                         if details.type_name.lower().find(ud.item_type.lower()) != -1:
-                            out.write("           <li>" + ud.unit_name + " </li>")
+                            out.write("           <li>" + ud.unit_name + " </li>\n")
 
-                out.write("        </ul>")
+                out.write("        </ul>\n")
             else:
-                out.write("        <li>Units: N/A (units may not be specified)</li>")
+                out.write("        <li>Units: N/A (units may not be specified)</li>\n")
 
             period = details.period_type.value
             if period == "instant":
                 period = "Instant in time"
             else:
                 period = "Period of time"
-            out.write("        <li>Period: " + period + "</li>")
-            out.write("        <li>Nillable: " + str(details.nillable) + "</li>")
+            out.write("        <li>Period: " + period + "</li>\n")
+            out.write("        <li>Nillable: " + str(details.nillable) + "</li>\n")
 
             if concept == "us-gaap:Revenues":
                 calc = "Other Income + RebateRevenue + PeformanceBasedIncentiveRevenue + Electrical Generation Revenue = Revenues"
             else:
                 calc = "N/A"
-            out.write("        <li>Calculations: " + calc + "</li>")
-            out.write("</li>")
-            out.write("      </ul>")
-    out.write("  </body>")
-    out.write("</html>")
+            out.write("        <li>Calculations: " + calc + "</li>\n")
+            out.write("</li>\n")
+            out.write("      </ul>\n")
+    out.write("  </body>\n")
+    out.write("</html>\n")
